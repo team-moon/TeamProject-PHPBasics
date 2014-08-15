@@ -1,0 +1,380 @@
+header, footer,
+h1, h2, div, p,
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+#wrapper {    
+    background-color: #f8f8f8;
+    margin: 40px auto;
+    width: 700px;
+}
+
+h2 {
+    border-bottom: 1px dotted #000;
+    margin-bottom: 20px;
+    padding: 20px 0 5px;
+}
+
+input[type="submit"],
+input[type="reset"]{
+    background-color: #fff;
+}
+
+/* puts dots on overflow */
+.overflow-safe {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*************************************************
+    CLEAR FLOATS
+*************************************************/
+
+#header:after,
+#main-nav ul:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+/*************************************************
+    HEADER
+*************************************************/
+
+#header {
+    background-color: #808080;
+    color: #fff;
+    padding: 10px;
+}
+
+#logo {
+    float: left;
+    width: 200px;
+}
+
+#logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Login Form */
+
+#login-form {
+    float: right;
+    padding-top: 14px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    padding: 0 3px;
+    width: 100px;
+}
+
+#login-form input[type="submit"] {
+    background-color: #fff;
+    margin: 0;
+}
+
+#hello-user {
+    font-size: 12px;
+    float: right;
+    padding-top: 14px;
+}
+
+#hello-user a {
+    color: orange;
+    text-decoration: none;
+}
+
+#hello-user a:hover {
+    text-decoration: underline;
+}
+
+#main-nav {
+    padding: 0 10px;
+}
+
+#main-nav li {
+    display: inline-block;
+    float: left;
+}
+
+#main-nav li a {
+    border-bottom: 2px solid #f8f8f8;
+    color: #000;
+    display: block;
+    font-weight: bold;
+    padding: 10px 10px 2px;
+    text-decoration: none;
+}
+
+#main-nav li a:hover {
+    /*border-bottom: 2px solid #000;*/
+}
+
+#main-nav li a.current {
+    border-bottom: 2px solid #000;
+}
+
+/*************************************************
+    CONTENT
+*************************************************/
+
+#content {    
+    padding: 0 10px 30px;
+}
+
+p.error-msg {
+    border: 1px solid #f00;
+    color: #f00;
+    font-size: 14px;
+    margin: 10px auto 0;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+p.success-msg {
+    border: 1px solid #090;
+    color: #090;
+    font-size: 14px;
+    margin: 10px auto 0;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+/* SignUp Form */
+
+#signup-form p {
+    padding-bottom: 10px;
+}
+
+#signup-form label {
+    display: inline-block;
+    width: 125px;
+}
+
+#signup-form form {
+    padding-top: 10px;
+}
+
+#signup-form input[type="submit"] {
+    margin-left: 131px;
+}
+
+/* Change Password Form */
+
+#change-passwd-form p {
+    padding-bottom: 10px;
+}
+
+#change-passwd-form label {
+    display: inline-block;
+    width: 125px;
+}
+
+#change-passwd-form form {
+    padding-top: 10px;
+}
+
+#change-passwd-form input[type="submit"] {
+    margin-left: 131px;
+}
+
+/* Add Category Form */
+
+#add-category-form p {
+    padding-bottom: 10px;
+}
+
+#add-category-form label {
+    display: inline-block;
+    width: 125px;
+}
+
+#add-category-form form {
+    padding-top: 10px;
+}
+
+#add-category-form input[type="submit"] {
+    margin-left: 131px;
+}
+
+/* Admin Form */
+
+#admin-form {
+
+}
+
+#change-user-access {
+    padding-top: 40px;
+}
+
+#change-user-access p {
+    padding-bottom: 10px;
+}
+
+#change-user-access p label {
+    padding-right: 20px;
+}
+
+#change-user-access p span {
+    font-weight: bold;
+}
+
+#choose-user input[name="delete-user"] {
+    background-color: #f00;
+	color: #fff;
+}
+
+/* Add Post Form */
+
+#add-post-form {
+
+}
+
+#add-post-form p {
+    padding-bottom: 10px;
+}
+
+#add-post-form label {
+    display: inline-block;
+    width: 125px;
+}
+
+#add-post-form form {
+    padding-top: 10px;
+}
+
+#add-post-form input[type="text"] {
+    width: 250px;
+}
+
+#add-post-form input[type="submit"] {
+    margin-left: 131px;
+}
+
+#add-post-form textarea {
+    width: 250px;
+    height: 100px;
+}
+
+#add-post-form select {
+    margin: 0;
+    min-width: 100px;
+}
+
+#add-post-form form p:nth-of-type(3) label {
+    vertical-align: top;
+}
+
+/* Filter Form */
+
+#filter-form {
+	margin-bottom: 20px;
+}
+
+/* Post */
+
+.post {
+	margin-bottom: 30px;
+}
+
+.post-header {
+	padding-bottom: 10px;
+}
+
+.post-header h1 {
+	font-size: 14px;
+}
+
+.post-body {
+	padding-bottom: 10px;
+}
+
+.post-footer {
+	font-size: 12px;
+}
+
+.post-footer .delete {
+	color: #f00;
+}
+
+.post-footer a {
+	color: #000;
+}
+
+.no-posts {
+	padding-top: 20px;
+}
+
+.no-posts a {
+    color: #000;
+}
+
+/*************************************************
+    PAGINATION
+*************************************************/
+
+#pagination {
+	text-align: center;
+}
+
+#pagination li {	
+	display: inline-block;
+	margin-right: 2px;
+}
+
+#pagination a {
+	border: 1px solid #808080;
+	color: #808080;
+	display: block;
+	padding: 3px 5px;
+	text-decoration: none;
+}
+
+#pagination a:hover {
+	background-color: #808080;
+	color: #fff;
+}
+
+#pagination a.current-page {
+	background-color: #808080;
+	color: #fff;
+}
+
+#pagination a.pagination-arrow {
+	background-color: #e8e8e8;
+}
+
+#pagination a.pagination-arrow:hover {
+	background-color: #808080;
+	color: #fff;
+}
+
+/*************************************************
+    FOOTER
+*************************************************/
+
+#footer {
+    background-color: #808080;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px;
+}
+
+#footer p {
+    text-align: center;
+}
