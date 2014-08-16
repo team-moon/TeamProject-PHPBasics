@@ -1,10 +1,10 @@
 <?php
 
 // Local
-define('SQL_HOST', 'XXXXXXXX');
-define('SQL_USER', 'XXXXXXXX');
-define('SQL_PASS', 'XXXXXXXX');
-define('SQL_DB', 'XXXXXXXX');
+define('SQL_HOST', 'localhost');
+define('SQL_USER', 'root');
+define('SQL_PASS', 'localhost');
+define('SQL_DB', 'message_board_db');
 
 $connection = mysqli_connect(SQL_HOST, SQL_USER, SQL_PASS, SQL_DB);
 
