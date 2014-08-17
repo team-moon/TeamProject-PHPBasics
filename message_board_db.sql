@@ -47,6 +47,15 @@ INSERT INTO `categories` (`category_id`, `category_name`) VALUES
 
 -- --------------------------------------------------------
 
+
+CREATE TABLE IF NOT EXISTS `comments` (
+  `comment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `book_id` int(255) NOT NULL,
+  `user_id` varchar(250) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `comment_content` varchar(250) NOT NULL,
+  PRIMARY KEY (`comment_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 --
 -- Table structure for table `messages`
 --

@@ -162,7 +162,7 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
 
     <article class="post">
         <header class="post-header">
-            <h1><?php echo $title; ?></h1>
+            <a href="post.php?id=<?php echo $messageId; ?>"><h1><?php echo $title; ?></h1></a>
         </header><!-- .post-header -->
 
         <div class="post-body">
