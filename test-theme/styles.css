@@ -1,0 +1,245 @@
+@font-face {
+	font-family: alien;
+	src: url(ca.ttf);
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Calibri";
+	background-color: grey;
+}
+body > #wrapper {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*///////////HEADER/////////////*/
+#wrapper > header {
+	background-color: #3A393B;
+	color: white;
+	box-shadow: 0px 0px 20px black;
+}
+#wrapper > header > #logo {
+	display: inline-block;
+	font-size: 2.2em;
+	font-weight: bold;
+	vertical-align: top;
+	font-family: alien;
+	padding: 10px;
+	padding-left: 650px;
+}
+#wrapper > header > nav {
+	background-color: black;
+	text-align: right;
+}
+#wrapper > header > nav > ul {
+	list-style-type: none;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+#wrapper > header > nav > ul > li {
+	display: inline-block;
+	margin-right: 20px;
+}
+#wrapper > header > nav > ul > li > a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.7em;
+	font-weight: bold;
+}
+#wrapper > header > nav > ul > li > a:hover {
+	color: grey;
+}
+
+/*///////ASIDE///////*/
+#wrapper > #asides {
+	float: left;
+	margin-left: 10px;
+}
+#wrapper > #asides > aside {
+	background-color: #3A393B;
+	width: 150%;
+	margin: 10px; 
+	box-shadow: 0px 0px 20px black;
+}
+#wrapper > #asides > aside > #log_in {
+	display: inline-block;
+	text-align: left;
+	padding: 15px;
+}
+#wrapper > #asides > aside > header {
+	background-color: black;
+	color: white;
+	font-family: alien;
+	font-size: 1.7em;
+	text-align: right;
+	margin-top: 20px;
+	padding: 5px;
+}
+#wrapper > #asides > aside > #log_in > div {
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+#wrapper > #asides > aside > #log_in > form {
+	display: inline-block;
+	margin-top: 10px;
+}
+#wrapper > #asides > aside > #log_in > form > input[type="text"], input[type="password"] {
+	border: 1px solid black;
+	height: 30px;
+	padding-left: 10px;
+	outline: none;
+	margin: 2px;
+	width: 150%;
+}
+#wrapper > #asides > aside > #log_in > form > input[type="submit"] {
+	background-color: lightgrey;
+	text-align: left;
+	padding: 5px;
+	border: 1px solid black; 
+	margin: 2px;
+	margin-bottom: 10px;
+	width: 100px;
+	font-weight: bold;
+	text-align: center;
+}
+#wrapper > #asides > aside > #log_in > form > input[type="submit"]:hover {
+	background-color: grey;
+	cursor: pointer;
+}
+#wrapper > #asides > aside > #log_in > a {
+	display: inline-block;
+	color: white;
+}
+#wrapper > #asides > aside > #log_in > a:hover {
+	color: grey;
+}
+#wrapper > #asides > aside > #friends_links > ul {
+	list-style-type: none;
+	margin: 10px;
+	padding: 10px;
+}
+#wrapper > #asides > aside > #friends_links > ul > li > a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+#wrapper > #asides > aside > #friends_links > ul > li > a:hover {
+	color: grey;
+	text-decoration:  underline;
+}
+
+/*///////MAIN///////*/
+
+#wrapper > main {
+	width: 68%; 
+	display: inline-block;
+	float: right; 
+}
+#wrapper > main > section {
+	background-color: #3A393B;
+	margin: 20px;
+	box-shadow: 0px 0px 20px black;
+
+}
+#wrapper > main > section > header {
+	background-color: black;
+	color: white;
+	font-family: alien;
+	text-align: right;
+	font-size: 2.2em;
+	padding: 3px;
+}
+#wrapper > main > section > article {
+	padding: 10px;
+}
+#wrapper > main > section > article > header {
+	color: white;
+	font-weight: bold;
+	font-size: 1.8em;
+}
+#wrapper > main > section > article > p {
+	color: white;
+
+}
+
+
+footer {
+		background-color: black;
+		height: 80px;
+		margin-top: 20px;
+		box-shadow: 0px 0px 20px;
+		float: left; 
+		width: 100%;	
+	}
+	footer > #footer-site {
+		display: inline-block;
+		font-family: alien;
+		color: white;
+		font-size: 2em;
+		padding-top: 25px;
+		padding-left: 30px;
+	}
+	footer > div.social {
+		display: inline-block;
+		margin-left: 160px;
+	}
+	footer > div.social > ul {
+	list-style-type: none;
+	display: inline-block;
+	}
+	footer > div.social > ul > li {
+		display: inline-block;
+	}
+	footer > div.social > ul > li > a {
+		color: black;
+	}
+
+	#facebook {
+		left: 0;
+	display: inline-block;
+	background: url(icons.png);
+	background-position: 0px 0px;
+	width: 45px;
+	height: 48px;
+	}
+	#instagram {
+		left: 0;
+	display: inline-block;
+	background: url(icons.png);
+	background-position: -248px 0px;
+	width: 45px;
+	height: 48px;
+	}
+	#flickr {
+		left: 0;
+	display: inline-block;
+	background: url(icons.png);
+	background-position: 110px 0px;
+	width: 45px;
+	height: 48px;
+	}
+	#twitter {
+		left: 0;
+	display: inline-block;
+	background: url(icons.png);
+	background-position: -490px 0px;
+	width: 45px;
+	height: 48px;
+	}
+	#linkedin {
+		left: 0;
+	display: inline-block;
+	background: url(icons.png);
+	background-position: -367px 0px;
+	width: 45px;
+	height: 48px;
+	}
