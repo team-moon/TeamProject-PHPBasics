@@ -5,7 +5,7 @@ require 'includes/config.php';
 require 'includes/connection.php';
 require 'includes/functions.php';
 
-if (!existLoggedUser()) {
+if (existLoggedUser()) {
     header('Location: index.php');
     exit();
 }
@@ -55,6 +55,10 @@ if (isset($_SESSION['temp-title']) &&
                 }
                 ?>
             </select>
+        </p>
+        <p>
+            <label for="tags">Tags: </label>
+            <input type="text" id="tags" placeholder="Input tags seperated with a space" required/>
         </p>
         <p>
             <label for="message">Message:</label>
