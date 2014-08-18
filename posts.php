@@ -174,6 +174,16 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
             <a href="posts.php?author=<?php echo $authorId; ?>" title="Posts by <?php echo $authorName; ?>"><?php echo $authorName; ?></a>
             in <a href="posts.php?cat=<?php echo $categoryId; ?>" title="View all posts in <?php echo $categoryName; ?>"><?php echo $categoryName; ?></a>
 
+            <!-- Added by Stoyan -->
+            <?php if ($countAllPosts > 0 && $countFilteredPosts > 0) {
+                $counterVisits = mysql_query(" UPDATE messages SET views + 1 WHERE id = '$id' ");
+                ?>
+                <div class="counterVisits">
+                    <?php echo '<span>' . 'Topic visits: ' . $counterVisits . '</span>' ?>
+                </div>
+            <?php } ?>
+            <!-- Until here -->
+
             <?php if ($_SESSION['accessLevel'] > 1) { ?>            
                 ( <a class="delete" href="processing/delete.php?post=<?php echo $messageId; ?>" title="Delete this post">delete</a> )
             <?php } ?>
