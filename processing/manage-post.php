@@ -50,11 +50,12 @@ validateTags($tags, $messages);
 $title = mysqli_real_escape_string($connection, $title);
 $message = mysqli_real_escape_string($connection, $message);
 $categoryId = mysqli_real_escape_string($connection, $categoryId);
+$tags = mysqli_real_escape_string($connection, $tags);
 
 // Insert message
 $sql = "INSERT INTO `messages`
         VALUES (NULL, '" . $categoryId . "', '" . $_SESSION['userId'] . "',
-                NOW(), '" . $title . "', '" . $message . "')";
+                NOW(), '" . $title . "', '" . $tags . "', '" . $message . "')";
 
 $query = mysqli_query($connection, $sql);
 $_SESSION['messages'] = $messages['successfullPublish'];
