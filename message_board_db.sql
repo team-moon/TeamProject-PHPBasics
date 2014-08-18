@@ -41,17 +41,16 @@ CREATE TABLE IF NOT EXISTS `categories` (
 
 INSERT INTO `categories` (`category_id`, `category_name`) VALUES
 (1, 'HTML5'),
-(2, 'PHP'),
+(2, 'php'),
 (3, 'CSS3'),
 (4, 'Java');
-(5, 'JavaScript');
 
 -- --------------------------------------------------------
 
 
 CREATE TABLE IF NOT EXISTS `comments` (
   `comment_id` int(11) NOT NULL AUTO_INCREMENT,
-  `book_id` int(255) NOT NULL,
+  `message_id` int(255) NOT NULL,
   `user_id` varchar(250) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `comment_content` varchar(250) NOT NULL,
