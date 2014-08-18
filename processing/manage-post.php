@@ -16,11 +16,13 @@ if (!isset($_POST['add-post'])) {
 $title = $_POST['title'];
 $categoryId = $_POST['category'];
 $message = $_POST['message'];
+$tags = $_POST['tags'];
 
 // Keep entries for the user in case of not valid data
 $_SESSION['temp-title'] = $title;
 $_SESSION['temp-categoryId'] = $categoryId;
 $_SESSION['temp-message'] = $message;
+$_SESSION['temp-tags'] = $tags;
 
 // Check for empty field
 if (trim($title) == '' || trim($message) == '') {
@@ -38,10 +40,12 @@ if (trim($categoryId) == '') {
 $title = safeInput($title);
 $categoryId = safeInput($categoryId);
 $message = safeInput($message);
+$tags = safeInput($tags);
 
 validateTitle($title, $messages);
 validateMessage($message, $messages);
 validateCategory($connection, $categoryId, $messages);
+validateTags($tags, $messages);
 
 $title = mysqli_real_escape_string($connection, $title);
 $message = mysqli_real_escape_string($connection, $message);

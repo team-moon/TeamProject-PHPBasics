@@ -26,4 +26,5 @@ $messages = array(
     'successfullPublish'       => '<p class="success-msg">Successfully published.</p>',
     'successfullDelete'        => '<p class="success-msg">Successfully deleted.</p>',
     'userDeleted'              => '<p class="success-msg">The user was successfully deleted.</p>',
+    'tagsInvalidLength'        => '<p class="errpr-msg">Tags must be between 1 and 100 characters.</p>',
 );

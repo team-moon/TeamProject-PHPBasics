@@ -146,6 +146,13 @@ function validateMessage($message, $messages) {
         exit();
     }
 }
+function validateTags($tags) {
+    if (strlen($tags) < 1 || strlen($tags) > 100) {
+        $_SESSION['messages'] = $messages['tagsInvalidLength'];
+        header('Location: ../add-post.php');
+        exit();
+    }
+}
 
 /**
  * Check if the old password match

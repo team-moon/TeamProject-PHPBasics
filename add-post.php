@@ -58,7 +58,7 @@ if (isset($_SESSION['temp-title']) &&
         </p>
         <p>
             <label for="tags">Tags: </label>
-            <input type="text" id="tags" placeholder="Input tags seperated with a space" required/>
+            <input type="text" name="tags" placeholder="Input tags seperated with a space" required/>
         </p>
         <p>
             <label for="message">Message:</label>
