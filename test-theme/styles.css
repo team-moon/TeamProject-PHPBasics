@@ -29,11 +29,11 @@ body > #wrapper {
 	vertical-align: top;
 	font-family: alien;
 	padding: 10px;
-	padding-left: 650px;
 }
 #wrapper > header > nav {
 	background-color: black;
-	text-align: right;
+	text-align: left;
+	padding-left: 20px;
 }
 #wrapper > header > nav > ul {
 	list-style-type: none;
@@ -68,19 +68,19 @@ body > #wrapper {
 	margin: 10px; 
 	box-shadow: 0px 0px 20px black;
 }
-#wrapper > #asides > aside > #log_in {
-	display: inline-block;
-	text-align: left;
-	padding: 15px;
-}
 #wrapper > #asides > aside > header {
 	background-color: black;
 	color: white;
 	font-family: alien;
 	font-size: 1.7em;
-	text-align: right;
+	text-align: left;
 	margin-top: 20px;
 	padding: 5px;
+	padding-left: 10px;
+}
+#wrapper > #asides > aside > #log_in {
+	text-align: left;
+	padding: 15px;
 }
 #wrapper > #asides > aside > #log_in > div {
 	color: white;
@@ -121,6 +121,53 @@ body > #wrapper {
 #wrapper > #asides > aside > #log_in > a:hover {
 	color: grey;
 }
+
+#wrapper > #asides > aside > #sign_up {
+	text-align: left;
+	padding: 15px;
+	display: none;
+}
+#wrapper > #asides > aside > #sign_up > div {
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+#wrapper > #asides > aside > #sign_up > form {
+	display: inline-block;
+	margin-top: 10px;
+}
+#wrapper > #asides > aside > #sign_up > form > input[type="text"], input[type="password"] {
+	border: 1px solid black;
+	height: 30px;
+	padding-left: 10px;
+	outline: none;
+	margin: 2px;
+	width: 150%;
+}
+#wrapper > #asides > aside > #sign_up > form > input[type="submit"] {
+	background-color: lightgrey;
+	text-align: left;
+	padding: 5px;
+	border: 1px solid black; 
+	margin: 2px;
+	margin-bottom: 10px;
+	width: 100px;
+	font-weight: bold;
+	text-align: center;
+}
+#wrapper > #asides > aside > #sign_up > form > input[type="submit"]:hover {
+	background-color: grey;
+	cursor: pointer;
+}
+#wrapper > #asides > aside > #sign_up > a {
+	display: inline-block;
+	color: white;
+}
+#wrapper > #asides > aside > #sign_up > a:hover {
+	color: grey;
+}
+
+
 #wrapper > #asides > aside > #friends_links > ul {
 	list-style-type: none;
 	margin: 10px;
@@ -136,6 +183,12 @@ body > #wrapper {
 	color: grey;
 	text-decoration:  underline;
 }
+
+#wrapper > #asides > aside > #sign_in {
+	margin: 10px;
+	padding: 10px;
+}
+
 
 /*///////MAIN///////*/
 

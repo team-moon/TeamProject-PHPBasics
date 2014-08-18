@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Home</title>
 	<link rel="stylesheet" href="styles.css">
+	<script src="script.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -26,7 +27,7 @@
 			<aside>
 				<header>Log In</header>
 				<div id="log_in">
-						<div>Sign in:</div>
+						<div>Log In:</div>
 						<form action="" method="post">
 							<input type="text" name="user_name" placeholder="User Name...">
 							<br>
@@ -35,7 +36,20 @@
 							<input type="submit" value="Submit">
 						</form>
 						<br>
-						<a href="#">Don't have an account? Sign up!</a>
+						<a href="#" onclick="openSignIn()">Don't have an account? Sign up!</a>
+				</div>
+				
+				<div id="sign_up">
+						<div>Sign Up:</div>
+						<form action="" method="post">
+							<input type="text" name="sign_up_user_name" placeholder="User Name...">
+							<br>
+							<input type="password" name="sign_up_password" placeholder="Password...">
+							<br>
+							<input type="text" name="repeat_sign_up_password" placeholder="Repeat Password...">
+							<br>
+							<input type="submit" value="Sign Up">
+						</form>
 				</div>
 			</aside>
 			
