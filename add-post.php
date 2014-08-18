@@ -5,7 +5,7 @@ require 'includes/config.php';
 require 'includes/connection.php';
 require 'includes/functions.php';
 
-if (existLoggedUser()) {
+if (!existLoggedUser()) {
     header('Location: index.php');
     exit();
 }
@@ -20,7 +20,7 @@ if (isset($_SESSION['temp-title']) &&
     
     $title = $_SESSION['temp-title'];
     $categoryId = $_SESSION['temp-categoryId'];
-    $message = $_SESSION['temp-message'];    
+    $message = $_SESSION['temp-message'];   
 } else {
     $title = '';
     $categoryId = '';
@@ -34,13 +34,13 @@ if (isset($_SESSION['temp-title']) &&
     <form method="POST" action="processing/manage-post.php" role="form">
         <p>
             <label for="title">Title: </label>
-            <input id="title" type="text" name="title" value="<?php echo $title; ?>" required />
+            <input id="title" type="text" name="title" value="<?php echo $title; ?>" required placeholder="Post Title"/>
         </p>
         <p>
             <label>Category:</label>
             <?php $categories = getAllCategories($connection); ?>
             <select name="category" required>
-                <option value=""></option>
+                <option value="">-Category-</option>
                 <?php
                 for ($i = 0; $i < count($categories['category_id']); $i++) {
                     if ($categoryId == $categories['category_id'][$i]) {
