@@ -16,14 +16,17 @@ require 'includes/header.php';
 
 if (isset($_SESSION['temp-title']) &&
     isset($_SESSION['temp-categoryId']) &&
+	isset($_SESSION['temp-tags']) &&
     isset($_SESSION['temp-message'])) {
     
     $title = $_SESSION['temp-title'];
     $categoryId = $_SESSION['temp-categoryId'];
+    $tags = $_SESSION['temp-tags'];
     $message = $_SESSION['temp-message'];   
 } else {
     $title = '';
     $categoryId = '';
+    $tags = '';
     $message = '';  
 }
 ?>
@@ -73,6 +76,7 @@ if (isset($_SESSION['temp-title']) &&
 <?php
 unset($_SESSION['temp-title']);
 unset($_SESSION['temp-categoryId']);
+unset($_SESSION['temp-tags']);
 unset($_SESSION['temp-message']);
 
 require 'includes/footer.php';

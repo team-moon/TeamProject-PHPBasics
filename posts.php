@@ -176,7 +176,7 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
 
             <!-- Added by Stoyan -->
             <?php if ($countAllPosts > 0 && $countFilteredPosts > 0) {
-                $counterVisits = mysql_query(" UPDATE messages SET views + 1 WHERE id = '$id' ");
+                $counterVisits = mysql_query(" UPDATE messages SET views + 1 WHERE id = '$messageId' ");
                 ?>
                 <div class="counterVisits">
                     <?php echo '<span>' . 'Topic visits: ' . $counterVisits . '</span>' ?>

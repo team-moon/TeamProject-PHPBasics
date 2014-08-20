@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `date_published` datetime NOT NULL,
   `title` varchar(50) NOT NULL,
   `body` varchar(250) NOT NULL,
+  `tags` varchar(250) NOT NULL,
   PRIMARY KEY (`message_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
@@ -90,6 +91,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `passwd` varchar(50) NOT NULL,
+  `activity` varchar(50) NOT NULL,
   `access_lvl` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `name` (`name`)

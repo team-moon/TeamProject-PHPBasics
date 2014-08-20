@@ -31,7 +31,8 @@ if(isset($_POST['comment'])){
         if(!$error) {
             $userId=$_SESSION['userId'];
             $result = mysqli_query($connection, "INSERT INTO comments (message_id,user_id,comment_content) VALUES ('$messageId','$userId','$comment_content')");
-            echo '<div class="success">Comment successfully added!</div>';
+            $updateActivity = mysqli_query($connection, "UPDATE users SET activity = activity + 1 WHERE user_id = 1");
+			echo '<div class="success">Comment successfully added!</div>';
         }
     }
 $sql = 'SELECT * FROM messages WHERE message_id=' . $messageId;

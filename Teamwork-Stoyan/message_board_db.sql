@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `date_published` datetime NOT NULL,
   `title` varchar(50) NOT NULL,
   `body` varchar(250) NOT NULL,
+  `tags` varchar(250) NOT NULL,
   PRIMARY KEY (`message_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 

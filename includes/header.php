@@ -41,6 +41,9 @@ if (existLoggedUser()) {
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Posts') ?> href="posts.php">Posts (<?php echo $countAllPosts; ?>)</a>
                         </li>
+						<li>
+                            <a <?php checkForCurrentPage($pageTitle, 'Users') ?> href="users.php">Users</a>
+                        </li>
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Add Post') ?> href="add-post.php">Add Post</a>
                         </li>

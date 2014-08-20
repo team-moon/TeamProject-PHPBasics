@@ -55,7 +55,7 @@ $tags = mysqli_real_escape_string($connection, $tags);
 // Insert message
 $sql = "INSERT INTO `messages`
         VALUES (NULL, '" . $categoryId . "', '" . $_SESSION['userId'] . "',
-                NOW(), '" . $title . "', '" . $tags . "', '" . $message . "')";
+                NOW(), '" . $title . "', '" . $message . "', '" . $tags . "')";
 
 $query = mysqli_query($connection, $sql);
 $_SESSION['messages'] = $messages['successfullPublish'];
