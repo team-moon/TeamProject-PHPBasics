@@ -52,7 +52,7 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
 
     <article class="post">
         <header class="post-header">
-            <a href="users.php?id=<?php echo $userid; ?>"><h1><?php echo $username; ?></h1> Points: <?php echo $activity; ?></a>
+            <a href="posts.php?author=<?php echo $userid; ?>"><h1><?php echo $username; ?></h1> Points: <?php echo $activity; ?></a>
         </header><!-- .post-header -->
     </article><!-- .post -->
 <?php } 
