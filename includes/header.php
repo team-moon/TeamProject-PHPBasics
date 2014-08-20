@@ -63,6 +63,13 @@ if (existLoggedUser()) {
                     </ul>
                 </nav><!-- #main-nav -->
             <?php } ?>
+			<br>
+			<div id="search-box">
+                    <form method="POST" action="search.php" role="form">
+                        <input type="text" name="searchText" placeholder="search..." required />
+                        <input type="submit" name="search" value="Search" />
+                    </form>
+                </div><!-- #search-box -->
 
             <div id="content">
                 <?php
