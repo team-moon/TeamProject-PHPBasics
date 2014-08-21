@@ -56,7 +56,29 @@ body > #wrapper {
 #wrapper > header > nav > ul > li > a:hover {
 	color: grey;
 }
-
+#wrapper > header > nav > #search-box {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-bottom: 13px;
+	margin-left: 700px; 
+}
+#wrapper > header > nav > #search-box input[type="text"] {
+	border: 1px solid white;
+	width: 200px;
+	height: 25px;
+}
+#wrapper > header > nav > #search-box input[type="submit"] {
+	width: 80px;
+	height: 27px;
+	border: 1px solid lightgrey;
+	background-color: lightgrey;
+	font-weight: bold;
+}
+#wrapper > header > nav > #search-box input[type="submit"]:hover {
+	background-color: grey;
+	border: grey;
+	cursor: pointer;
+}
 /*///////ASIDE///////*/
 #wrapper > #asides {
 	float: left;

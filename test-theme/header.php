@@ -18,6 +18,11 @@
 					<li><a href="posts.php">Forum</a></li>
 					<li><a href="#">Contacts</a></li>
 				</ul>
-				
+				<div id="search-box">
+                    <form method="POST" action="search.php" role="form">
+                        <input type="text" name="searchText" placeholder="SEARCH..." required />
+                        <input type="submit" name="search" value="Search" />
+                    </form>
+                </div>
 			</nav>
 		</header>
