@@ -297,7 +297,7 @@ p.success-msg {
 }
 
 .post-header h1 {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .post-body {
@@ -363,6 +363,31 @@ p.success-msg {
 	background-color: #808080;
 	color: #fff;
 }
+
+/* Added by Stoyan */
+
+/*************************************************
+    USERS
+*************************************************/
+.post > .post-header {
+    border: 1px solid black;
+    background: #3A393B;
+    color: white;
+    width: 40%;
+}
+    .post-header a {
+        text-decoration: none;
+        font-family: alien, Tahoma, Verdana;
+        color: red;
+        margin-top: 10%;
+    }
+    .post-header a:hover {
+        text-decoration: underline !important;
+        background: black;
+        color: blue;
+    }
+
+/* Until here */
 
 /*************************************************
     FOOTER
