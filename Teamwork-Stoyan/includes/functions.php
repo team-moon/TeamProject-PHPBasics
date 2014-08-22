@@ -217,6 +217,29 @@ function categoryExist($connection, $categoryName) {
     }
 }
 
+function existSearchResults($connection, $searchText, $messages) {
+    $sql = "SELECT `title`
+            FROM `messages`
+            WHERE `title`
+            LIKE '%$searchText%'";
+
+    $query = mysqli_query($connection, $sql);
+
+    if (!$query) {
+        $_SESSION['messages'] = $messages['wrongQueryExecution'];
+        header('Location: index.php');
+        exit;
+    }
+
+    $result = $query->num_rows;
+
+    if ($result > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function insertCategory($connection, $categoryName, $messages) {
     $sql = "INSERT INTO `categories`
             VALUES (NULL, '" . $categoryName . "')";

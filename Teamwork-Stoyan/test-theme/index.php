@@ -1,30 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Home</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="script.js"></script>
-</head>
-<body>
-	<div id="wrapper">
-		<header>
-			<div id="logo">
-				Team Moon's Awesome Forum
-			</div>
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Forum</a></li>
-					<li><a href="#">Gallery</a></li>
-					<li><a href="#">Contacts</a></li>
-				</ul>
-				
-			</nav>
-		</header>
+	<?php
+	session_start();
+	session_regenerate_id(true);
+    require '../includes/config.php';
+	require '../includes/functions.php';
+    if (existLoggedUser()) {
+        $username = $_SESSION['username'];
+        $userId = $_SESSION['userId'];
+    }
+	require 'header.php';
+
+	if (isset($_SESSION['temp-username'])) {
+    $username = $_SESSION['temp-username'];
+	} else {
+    	$username = '';
+	}
+    ?>
+
 
 		<div id="asides">
 			<aside>
+				<?php if (!existLoggedUser()) { ?>                
+                    <header>User Panel</header>
+                    <div id="hello-user">
+                        <p>Hello, <?php echo $username . ' ' ?></p>
+                        <hr>
+                	<ul>
+                	               	<li><a href="">POSTS</a></li>
+                	               	<li><a href="add-post.php">ADD POST</a></li>
+                	               	<li><a href="">ACCOUNT</a></li>
+					</ul>               
+                    <hr>
+                    <a href="processing/logout.php">Logout</a>
+                    </div>
+                <?php } else { ?>
 				<header>Log In</header>
 				<div id="log_in">
 						<div>Log In:</div>
@@ -38,7 +46,6 @@
 						<br>
 						<a href="#" onclick="openSignIn()">Don't have an account? Sign up!</a>
 				</div>
-				
 				<div id="sign_up">
 						<div>Sign Up:</div>
 						<form action="" method="post">
@@ -51,6 +58,7 @@
 							<input type="submit" value="Sign Up">
 						</form>
 				</div>
+				<?php } ?>
 			</aside>
 			
 			<aside>
@@ -66,7 +74,7 @@
 				</div>
 			</aside>
 		</div>
-		<main>
+		<main id="index-main">
 			<section>
 					<header>Hello!</header>
 					<article>
@@ -154,24 +162,7 @@
 						</p>
 					</article>
 			</section>
-			
-			
-		</main>
-
-		<footer>
-			<div id="footer-site">
-				Team Moon 2014&copy;. All Rights Reserved.
-			</div>
-			<div class="social">
-				<ul>
-					<li><a href="#" id="facebook"></a></li>
-					<li><a href="#" id="twitter"></a></li>
-					<li><a href="#" id="instagram"></a></li>
-					<li><a href="#" id="linkedin"></a></li>
-					<li><a href="#" id="flickr"></a></li>
-				</ul>
-			</div>
-		</footer>
-	</div>
-</body>
-</html>
+		
+<?php
+require 'footer.php';
+?>

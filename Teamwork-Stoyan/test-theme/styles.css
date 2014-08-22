@@ -56,17 +56,44 @@ body > #wrapper {
 #wrapper > header > nav > ul > li > a:hover {
 	color: grey;
 }
-
+#wrapper > header > nav > #search-box {
+	display: inline-block;
+	vertical-align: bottom;
+	margin-bottom: 13px;
+	margin-left: 700px; 
+}
+#wrapper > header > nav > #search-box input[type="text"] {
+	border: 1px solid white;
+	width: 200px;
+	height: 25px;
+}
+#wrapper > header > nav > #search-box input[type="submit"] {
+	width: 80px;
+	height: 27px;
+	border: 1px solid lightgrey;
+	background-color: lightgrey;
+	font-weight: bold;
+}
+#wrapper > header > nav > #search-box input[type="submit"]:hover {
+	background-color: grey;
+	border: grey;
+	cursor: pointer;
+}
 /*///////ASIDE///////*/
 #wrapper > #asides {
 	float: left;
 	margin-left: 10px;
+	width: 250px;
 }
 #wrapper > #asides > aside {
 	background-color: #3A393B;
 	width: 150%;
-	margin: 10px; 
+	margin: 10px;
+	margin-top: 20px; 
 	box-shadow: 0px 0px 20px black;
+}
+#wrapper > #asides > aside hr {
+	margin: 5px;
 }
 #wrapper > #asides > aside > header {
 	background-color: black;
@@ -188,11 +215,184 @@ body > #wrapper {
 	margin: 10px;
 	padding: 10px;
 }
-
-
+#wrapper > #asides > aside > #hello-user {
+	padding: 10px;
+}
+#wrapper > #asides > aside > #hello-user > p {
+	color: white;
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#wrapper > #asides > aside > #hello-user > a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+#wrapper > #asides > aside > #hello-user > a:hover {
+	color: grey;
+}
+#wrapper > #asides > aside > #hello-user > ul {
+	list-style-type: none;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+#wrapper > #asides > aside > #hello-user > ul > li > a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.2em;
+	display: inline-block;
+}
+#wrapper > #asides > aside > #hello-user > ul > li > a:hover {
+	color: grey;
+}
 /*///////MAIN///////*/
 
-#wrapper > main {
+/*//////ADD POST FORM///////*/
+
+#add-post-form {
+	background-color: #3A393B;
+	float: right;
+	display: inline-block;
+	width: 68%;
+	margin: 20px;
+	box-shadow: 0px 0px 20px;
+}
+#add-post-form > form > hr {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+#add-post-form > header {
+	background-color: black;
+	color: white;
+	font-family: alien;
+	font-size: 2.5em;
+	padding-left: 15px;
+}
+#add-post-form > form {
+	margin: 20px;
+	margin-top: 40px;
+}
+#add-post-form > form > p > label {
+	display: inline-block;
+	font-size: 1.8em;
+	font-weight: bold;
+	padding-right: 70px;
+	width: 100px;
+	color: white;
+	vertical-align: top;
+}
+#add-post-form > form > p > #message {
+	vertical-align: top;
+}
+#add-post-form > form > p > input[type="text"] {
+	width: 50%;
+	height: 30px;
+	border: 1px solid black;
+	padding-left: 10px;
+	font-size: 1.2em;
+}
+#add-post-form > form > p > input[type="submit"] {
+	border: 1px solid black;
+	padding: 10px 50px;
+	margin-left: 300px;
+	margin-top: 35px;
+	font-size: 1.2em;
+}
+#add-post-form > form > p > input[type="submit"]:hover {
+	background-color: grey;
+	cursor: pointer;
+}
+#add-post-form > form > p > select {
+	width: 51.3%;
+	border: 1px solid black;
+	height: 30px;
+	font-size: 1.2em;
+}
+#add-post-form > form > p > textarea {
+	width: 51%;
+	border: 1px solid black;
+	height: 200px;
+}
+/*//////ADD POST FORM END///////*/
+
+/*POSTS PAGE*/
+#posts-main {
+	background-color: #3A393B;
+	margin: 20px;
+	box-shadow: 0px 0px 20px;
+	width: 68%;
+	float: right;
+}
+#posts-main > header {
+	background-color: black;
+	font-family: alien;
+	color: white;
+	text-align: left;
+	font-size: 2.3em;
+	padding: 5px;
+	padding-left: 20px;
+}
+#posts-main > #filter-form {
+	margin: 10px;
+}
+#posts-main > #filter-form > form > select {
+	width: 130px;
+	border: 1px solid black;
+	font-size: 17px;
+	font-weight: bold;
+}
+#posts-main > #filter-form > form > input[type="submit"] {
+	width: 130px;
+	border: 1px solid black;
+	font-size: 17px;
+	font-weight: bold;
+}
+#posts-main > #filter-form > form > input[type="submit"]:hover {
+	background-color: grey;
+	cursor: pointer;
+}
+#posts-main > article.post {
+	margin: 20px;
+	background-color: lightgrey;
+	margin-bottom: 10px;
+	box-shadow: 0px 0px 20px;
+	padding: 10px;
+}
+#posts-main > article a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;	
+}
+#posts-main > article a:hover {
+	color: grey;
+}
+#posts-main > article > .post-header {
+	margin-bottom: 10px;
+}
+#posts-main > article > .post-body {
+	margin: 10px;
+}
+#posts-main > article > header > a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+#posts-main > article > header > a:hover {
+	color: grey;
+}
+#posts-main > article > footer {
+	margin-top: 0px;
+	background-color: lightgrey;
+	box-shadow: none;
+	margin: 10px;
+}
+
+#wrapper > main#index-main {
 	width: 68%; 
 	display: inline-block;
 	float: right; 
@@ -207,9 +407,10 @@ body > #wrapper {
 	background-color: black;
 	color: white;
 	font-family: alien;
-	text-align: right;
+	text-align: left;
 	font-size: 2.2em;
 	padding: 3px;
+	padding-left: 15px;
 }
 #wrapper > main > section > article {
 	padding: 10px;
@@ -225,7 +426,7 @@ body > #wrapper {
 }
 
 
-footer {
+#wrapper > footer {
 		background-color: black;
 		height: 80px;
 		margin-top: 20px;

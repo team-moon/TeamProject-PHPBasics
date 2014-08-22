@@ -41,6 +41,9 @@ if (existLoggedUser()) {
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Posts') ?> href="posts.php">Posts (<?php echo $countAllPosts; ?>)</a>
                         </li>
+						<li>
+                            <a <?php checkForCurrentPage($pageTitle, 'Users') ?> href="users.php">Users</a>
+                        </li>
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Add Post') ?> href="add-post.php">Add Post</a>
                         </li>
@@ -60,6 +63,13 @@ if (existLoggedUser()) {
                     </ul>
                 </nav><!-- #main-nav -->
             <?php } ?>
+			<br>
+			<div id="search-box">
+                    <form method="POST" action="search.php" role="form">
+                        <input type="text" name="searchText" placeholder="search..." required />
+                        <input type="submit" name="search" value="Search" />
+                    </form>
+                </div><!-- #search-box -->
 
             <div id="content">
                 <?php

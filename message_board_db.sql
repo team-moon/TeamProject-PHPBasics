@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 
 INSERT INTO `categories` (`category_id`, `category_name`) VALUES
 (1, 'HTML5'),
-(2, 'php'),
+(2, 'PHP'),
 (3, 'CSS3'),
 (4, 'Java');
 
@@ -68,6 +68,8 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `title` varchar(50) NOT NULL,
   `body` varchar(250) NOT NULL,
   `tags` varchar(250) NOT NULL,
+  -- Added by Stoyan --
+  `views_count` int(11) NOT NULL,
   PRIMARY KEY (`message_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 

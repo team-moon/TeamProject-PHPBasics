@@ -157,6 +157,9 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
     $authorName = $row['name'];
     $datePublished = date('d/m/Y', strtotime($row['date_published']));
     $title = $row['title'];
+//    Added by Stoyan
+    $visitsCount2 = $row['views_count'];
+//    Until here
     $body = nl2br($row['body']);
     ?>
 
@@ -177,7 +180,7 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
             <!-- Added by Stoyan -->
             <?php if ($countAllPosts > 0 && $countFilteredPosts > 0) { ?>
                 <div class="counterVisits">
-                    <?php echo '<span>' . 'Topic visits: ' . $counterVisits . '</span>' ?>
+                    <?php echo '<span>' . 'Topic visits: ' . $visitsCount2 . '</span>' ?>
                 </div>
             <?php } ?>
             <!-- Until here -->

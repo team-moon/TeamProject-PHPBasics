@@ -38,7 +38,7 @@ if (isset($_SESSION['temp-username'])) {
             <input id="reenter-password" type="password" name="reenter-password" required />
         </p>
         <p>
-            <input type="submit" name="user-action" value="SignUp" />
+            <input type="submit" name="user-action" value="Sign Up" />
         </p>
     </form>
 </div><!-- #signup-form -->

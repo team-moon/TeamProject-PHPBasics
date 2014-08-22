@@ -157,6 +157,9 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
     $authorName = $row['name'];
     $datePublished = date('d/m/Y', strtotime($row['date_published']));
     $title = $row['title'];
+    //    Added by Stoyan
+    $visitsCount = $row['views_count'];
+    //    Until here
     $body = nl2br($row['body']);
     ?>
 
@@ -175,11 +178,9 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
             in <a href="posts.php?cat=<?php echo $categoryId; ?>" title="View all posts in <?php echo $categoryName; ?>"><?php echo $categoryName; ?></a>
 
             <!-- Added by Stoyan -->
-            <?php if ($countAllPosts > 0 && $countFilteredPosts > 0) {
-                $counterVisits = mysql_query(" UPDATE messages SET views + 1 WHERE id = '$messageId' ");
-                ?>
+            <?php if ($countAllPosts > 0 && $countFilteredPosts > 0) { ?>
                 <div class="counterVisits">
-                    <?php echo '<span>' . 'Topic visits: ' . $counterVisits . '</span>' ?>
+                    <?php echo '<span>' . 'Topic visits: ' . $visitsCount . '</span>' ?>
                 </div>
             <?php } ?>
             <!-- Until here -->

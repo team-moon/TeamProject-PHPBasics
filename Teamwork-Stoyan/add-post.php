@@ -16,24 +16,18 @@ require 'includes/header.php';
 
 if (isset($_SESSION['temp-title']) &&
     isset($_SESSION['temp-categoryId']) &&
+	isset($_SESSION['temp-tags']) &&
     isset($_SESSION['temp-message'])) {
     
     $title = $_SESSION['temp-title'];
     $categoryId = $_SESSION['temp-categoryId'];
-    $message = $_SESSION['temp-message'];
-
-    // Added by Stoyan
-    $counterVisits = 0;
-    // Until here
-
+    $tags = $_SESSION['temp-tags'];
+    $message = $_SESSION['temp-message'];   
 } else {
     $title = '';
     $categoryId = '';
-    $message = '';
-
-    // Added by Stoyan
-    $counterVisits = '';
-    // Until here
+    $tags = '';
+    $message = '';  
 }
 ?>
 
@@ -67,7 +61,7 @@ if (isset($_SESSION['temp-title']) &&
         </p>
         <p>
             <label for="tags">Tags: </label>
-            <input type="text" name="tags" placeholder="Input tags separated with a space" required/>
+            <input type="text" name="tags" placeholder="Input tags seperated with a space" required/>
         </p>
         <p>
             <label for="message">Message:</label>
@@ -82,6 +76,7 @@ if (isset($_SESSION['temp-title']) &&
 <?php
 unset($_SESSION['temp-title']);
 unset($_SESSION['temp-categoryId']);
+unset($_SESSION['temp-tags']);
 unset($_SESSION['temp-message']);
 
 require 'includes/footer.php';

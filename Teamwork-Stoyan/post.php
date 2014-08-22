@@ -19,21 +19,35 @@ if (isset($_GET['id'])) {
     $messageId = mysqli_real_escape_string($connection, $messageId);
 }
 if(isset($_POST['comment'])){
-        $error = false;
-        $comment_content=trim($_POST['comment_content']);
-        $comment_content=mysqli_real_escape_string($connection, $comment_content);
-        
-        if(mb_strlen($comment_content) < 5) {
-            echo '<div class="error">Too short comment!</div>';
-            $error = true;
-        }
-        
-        if(!$error) {
-            $userId=$_SESSION['userId'];
-            $result = mysqli_query($connection, "INSERT INTO comments (message_id,user_id,comment_content) VALUES ('$messageId','$userId','$comment_content')");
-            echo '<div class="success">Comment successfully added!</div>';
-        }
+    $error = false;
+    $comment_content=trim($_POST['comment_content']);
+    $comment_content=mysqli_real_escape_string($connection, $comment_content);
+
+    if(mb_strlen($comment_content) < 5) {
+        echo '<div class="error">Too short comment!</div>';
+        $error = true;
     }
+
+    if(!$error) {
+        $userId=$_SESSION['userId'];
+        $result = mysqli_query($connection, "INSERT INTO comments (message_id,user_id,comment_content) VALUES ('$messageId','$userId','$comment_content')");
+        $updateActivity = mysqli_query($connection, "UPDATE users SET activity = activity + 1 WHERE user_id = '$userId'");
+        echo '<div class="success">Comment successfully added!</div>';
+    }
+}
+
+// Added by Stoyan
+
+$updateVisits = "UPDATE `messages`
+                  SET `views_count` = views_count + 1
+                  WHERE `message_id` = $messageId";
+
+$updateResult = $connection->query($updateVisits);
+if (!$updateResult) {
+    exit('Invalid query: ' . mysql_error());
+}
+ //Until here
+
 $sql = 'SELECT * FROM messages WHERE message_id=' . $messageId;
     $result = mysqli_query($connection, $sql);
     if ($result->num_rows <= 0) {

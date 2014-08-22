@@ -14,6 +14,7 @@ $messages = array(
     'messageNotValidLength'    => '<p class="error-msg">Message must be between 1 and 250 characters.</p>',
     'categoryNotValidLength'   => '<p class="error-msg">Category must be between 2 and 12 characters.</p>',
     'wrongOldPassword'         => '<p class="error-msg">The old password is wrong.</p>',
+	'emptySearchField'         => '<p class="user-msg error-msg">Empty search field.</p>',
     'categoryExist'            => '<p class="error-msg">Already exist category with this name.</p>',
     'usernameExist'            => '<p class="error-msg">Choose different username as this is already used.</p>',
     'usernameNotValidContent'  => '<p class="error-msg">Username can contain only letters, digits and "_"</p>',
