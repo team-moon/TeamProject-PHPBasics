@@ -28,4 +28,13 @@ $messages = array(
     'successfullDelete'        => '<p class="success-msg">Successfully deleted.</p>',
     'userDeleted'              => '<p class="success-msg">The user was successfully deleted.</p>',
     'tagsInvalidLength'        => '<p class="errpr-msg">Tags must be between 1 and 100 characters.</p>',
+	'choosePost'               => '<p class="error-msg">Please choose post.</p>',
+    'postDeleted'              => '<p class="success-msg">The post was successfully deleted.</p>',
+    'noSuchPost'               => '<p class="error-msg">No such post.</p>',
+    'categoryDeleted'          => '<p class="success-msg">The category was successfully deleted.</p>',
+    'forbiddenCategory'        => '<p class="error-msg">This category is forbidden for for change and deletion.</p>',
+    'categoryNotUpdated'       => '<p class="error-msg">Category was not updated.</p>',
+    'chooseComment'            => '<p class="error-msg">Please choose comment.</p>',
+    'commentDeleted'           => '<p class="success-msg">The comment was successfully deleted.</p>',
+    'noSuchComment'            => '<p class="error-msg">No such comment.</p>',
 );
