@@ -406,3 +406,247 @@ function deleteUser($connection, $id) {
     
     $query = mysqli_query($connection, $sql);
 }
+
+function getAllMessagesNames($connection) {
+    $sql = "SELECT `message_id`, `title`" .
+            "FROM `messages`";
+
+    $query = mysqli_query($connection, $sql);
+
+    while ($row = $query->fetch_assoc()) {
+        $messages['message_id'][] = $row['message_id'];
+        $messages['title'][] = $row['title'];
+    }
+
+    return $messages;
+}
+
+function getMessageById($connection, $id) {
+    $id = mysqli_real_escape_string($connection, $id);
+
+    $sql = "SELECT *
+            FROM `messages`
+            WHERE `message_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+    $row = $query->fetch_assoc();
+
+
+    return $row;
+}
+
+function deleteMessage($connection, $id) {
+    $id = mysqli_real_escape_string($connection, $id);
+
+    $sql = "DELETE FROM `messages`
+            WHERE `message_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+}
+
+function changePost($connection, $id, $postTitle, $postDate, $postText, $postCategory, $postTags, $messages) {
+    $id = mysqli_real_escape_string($connection, $id);
+
+    $sql = "UPDATE `messages`
+            SET `title` = '" . $postTitle . "',
+                `date_published` = '" . $postDate . "',
+                `body` = '" . $postText . "',
+                `category_id` = '" . $postCategory . "',
+                `tags` = '" . $postTags . "'
+            WHERE `message_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+
+    $_SESSION['messages'] = $messages['successfullUpdate'];
+    header('Location: ../administration.php');
+    exit();
+}
+
+function validatePostTitle($title, $messages, $page) {
+    if (mb_strlen($title) < 5 || mb_strlen($title) > 50) {
+        $_SESSION['messages'] = $messages['titleNotValidLength'];
+        header('Location: ../' . $page);
+        exit();
+    }
+}
+
+function validatePostCategory($connection, $categoryId, $messages, $page) {
+    $allCategories = getAllCategories($connection);
+
+    if (!in_array($categoryId, $allCategories['category_id'])) {
+        $_SESSION['messages'] = $messages['noSuchCategory'];
+        header('Location: ../' . $page);
+        exit();
+    }
+}
+
+function validatePostMessage($message, $messages, $page) {
+    if (mb_strlen($message) < 1 || mb_strlen($message) > 250) {
+        $_SESSION['messages'] = $messages['messageNotValidLength'];
+        header('Location: ../' . $page);
+        exit();
+    }
+}
+function validatePostTags($tags, $messages, $page) {
+    if (strlen($tags) < 1 || strlen($tags) > 100) {
+        $_SESSION['messages'] = $messages['tagsInvalidLength'];
+        header('Location: ../' . $page);
+        exit();
+    }
+}
+function existSuchPostId($connection, $postId) {
+    $postId = mysqli_real_escape_string($connection, $postId);
+
+    $sql = "SELECT `message_id`
+            FROM `messages`
+            WHERE `message_id` = '" . $postId . "'";
+
+    $query = mysqli_query($connection, $sql);
+
+    if ($query->num_rows == 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function deleteCategory($connection, $id, $messages) {
+    $id = mysqli_real_escape_string($connection, $id);
+
+    if($id != 1) {
+        $setPostCat = "UPDATE `messages`
+                            SET `category_id` = 1
+                            WHERE category_id = '" . $id . "'";
+
+        $query = mysqli_query($connection, $setPostCat);
+
+        $sql = "DELETE FROM `categories`
+                WHERE `category_id` = '" . $id . "'";
+
+        $query = mysqli_query($connection, $sql);
+    } else {
+        $_SESSION['messages'] = $messages['forbiddenCategory'];
+        header('Location: ../administration.php');
+        exit();
+    }
+}
+function existSuchCategoryId($connection, $categoryId) {
+    $sql = "SELECT `category_id`
+            FROM `categories`
+            WHERE `category_id` = '" . $categoryId . "'";
+
+    $query = mysqli_query($connection, $sql);
+
+    if ($query->num_rows > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function validateCategoryTitle($categoryName, $messages, $page) {
+    if (mb_strlen($categoryName) < 2 || mb_strlen($categoryName) > 16) {
+        $_SESSION['messages'] = $messages['categoryNotValidLength'];
+        header('Location: ../' . $page);
+        exit();
+    }
+}
+function changeCategoryName($connection, $categoryId, $categoryName, $messages) {
+    $categoryName = mysqli_real_escape_string($connection, $categoryName);
+
+    $sql = "UPDATE `categories`
+            SET `category_name` = '" . $categoryName . "'
+            WHERE `category_id` = '" . $categoryId . "'";
+
+    $query = mysqli_query($connection, $sql);
+
+    if ($query) {
+        $_SESSION['messages'] = $messages['successfullUpdate'];
+        header('Location: ../administration.php');
+        exit();
+    } else {
+        $_SESSION['messages'] = $messages['categoryNotUpdated'];
+        header('Location: ../administration.php');
+        exit();
+    }
+}
+function getCategoryById($connection, $id) {
+    $id = mysqli_real_escape_string($connection, $id);
+
+    $sql = "SELECT *
+            FROM `categories`
+            WHERE `category_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+    $row = $query->fetch_assoc();
+
+    return $row;
+}
+function getPostComments($connection, $id)
+{
+    $sql = "SELECT *
+            FROM `comments`
+            WHERE `message_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+    $comments = null;
+
+    while ($row = $query->fetch_assoc()) {
+        $comments['comment_id'][] = $row['comment_id'];
+        $comments['date'][] = $row['date'];
+    }
+
+    return $comments;
+}
+function getCommentById($connection, $id) {
+    $id = mysqli_real_escape_string($connection, $id);
+
+    $sql = "SELECT *
+            FROM `comments`
+            WHERE `comment_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+    $row = $query->fetch_assoc();
+
+    return $row;
+}
+function existSuchCommentId($connection, $commId) {
+    $sql = "SELECT `comment_id`
+            FROM `comments`
+            WHERE `comment_id` = '" . $commId . "'";
+
+    $query = mysqli_query($connection, $sql);
+
+    if ($query->num_rows > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function deleteComment($connection, $id) {
+    $id = mysqli_real_escape_string($connection, $id);
+
+    $sql = "DELETE FROM `comments`
+            WHERE `comment_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+
+}
+function changeComment($connection, $id, $commentDate, $commentText, $messages) {
+    $id = mysqli_real_escape_string($connection, $id);
+
+    $sql = "UPDATE `comments`
+            SET `date` = '" . $commentDate . "',
+                `comment_content` = '" . $commentText . "'
+            WHERE `comment_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+
+    $_SESSION['messages'] = $messages['successfullUpdate'];
+    unset($_SESSION['$post-comments']);
+    unset($_SESSION['current-post-comments']);
+    unset($_SESSION['temp-comment-date']);
+    unset($_SESSION['temp-comment-text']);
+    unset($_SESSION['current-comment-id']);
+    header('Location: ../administration.php');
+    exit();
+}
