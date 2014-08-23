@@ -16,7 +16,8 @@
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="posts.php">Forum</a></li>
-					<li><a href="#">Contacts</a></li>
+					<li><a href="contacts.php">Contacts</a></li>
+					<li><a href="users.php">Users</a></li>
 				</ul>
 				<div id="search-box">
                     <form method="POST" action="search.php" role="form">

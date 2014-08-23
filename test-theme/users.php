@@ -14,8 +14,8 @@ $pageTitle = 'Users';
 
 require 'header.php';
 ?>
-<h2>All Users</h2>
-
+<div id="posts-wrapper">
+<h1>All Users</h1>
 <?php
 
 if (isset($_GET['page'])) {
@@ -50,10 +50,12 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
     $activity = $row['activity'];
     ?>
 
-    <article class="post">
+    <article id="users-main">
         <header class="post-header">
             <a href="posts.php?author=<?php echo $userid; ?>"><h1><?php echo $username; ?></h1> Points: <?php echo $activity; ?></a>
         </header><!-- .post-header -->
     </article><!-- .post -->
-<?php } 
+<?php } ?>
+</div>
+<?php 
 require 'footer.php';
