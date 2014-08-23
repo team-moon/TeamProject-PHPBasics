@@ -68,7 +68,6 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `title` varchar(50) NOT NULL,
   `body` varchar(250) NOT NULL,
   `tags` varchar(250) NOT NULL,
-  -- Added by Stoyan --
   `views_count` int(11) NOT NULL,
   PRIMARY KEY (`message_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
@@ -107,7 +106,3 @@ INSERT INTO `users` (`user_id`, `name`, `passwd`, `access_lvl`) VALUES
 (1, 'Atanas', 'Atanas', 3),
 (2, 'Martin', 'Martin', 2),
 (3, 'Stamat', 'Stamat', 1);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
