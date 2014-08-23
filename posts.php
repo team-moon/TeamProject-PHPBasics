@@ -153,6 +153,7 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
     $messageId = $row['message_id'];
     $categoryId = $row['category_id'];
     $categoryName = $row['category_name'];
+    $tags = $row['tags'];
     $authorId = $row['author_id'];
     $authorName = $row['name'];
     $datePublished = date('d/m/Y', strtotime($row['date_published']));
@@ -175,7 +176,7 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
         <footer class="post-footer">
             Posted on <?php echo $datePublished; ?> by
             <a href="posts.php?author=<?php echo $authorId; ?>" title="Posts by <?php echo $authorName; ?>"><?php echo $authorName; ?></a>
-            in <a href="posts.php?cat=<?php echo $categoryId; ?>" title="View all posts in <?php echo $categoryName; ?>"><?php echo $categoryName; ?></a>
+            in <a href="posts.php?cat=<?php echo $categoryId; ?>" title="View all posts in <?php echo $categoryName; ?>"><?php echo $categoryName; ?></a> with tags: <?php echo $tags; ?>
 
             <!-- Added by Stoyan -->
             <?php if ($countAllPosts > 0 && $countFilteredPosts > 0) { ?>
