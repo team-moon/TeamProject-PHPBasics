@@ -176,7 +176,7 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
         <footer class="post-footer">
             Posted on <?php echo $datePublished; ?> by
             <a href="posts.php?author=<?php echo $authorId; ?>" title="Posts by <?php echo $authorName; ?>"><?php echo $authorName; ?></a>
-            in <a href="posts.php?cat=<?php echo $categoryId; ?>" title="View all posts in <?php echo $categoryName; ?>"><?php echo $categoryName; ?></a> with tags: <?php echo $tags; ?>
+            in <a href="posts.php?cat=<?php echo $categoryId; ?>" title="View all posts in <?php echo $categoryName; ?>"><?php echo $categoryName; ?></a> <?php if(!$tags == ""){echo "with tags:  $tags";} ?>
 
             <!-- Added by Stoyan -->
             <?php if ($countAllPosts > 0 && $countFilteredPosts > 0) { ?>
