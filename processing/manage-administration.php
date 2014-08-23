@@ -31,7 +31,7 @@ if (isset($_POST['show-user']) || isset($_POST['delete-user'])) {
     
     if (isset($_POST['show-user'])) {
         $level = getAccessLevelByUserId($connection, $id);
-        header('Location: ../administration.php?id=' . $id . '&level=' . $level);
+        header('Location: ../administration.php?user-id=' . $id . '&level=' . $level);
         exit();
     }
     
@@ -57,4 +57,9 @@ if (isset($_POST['change-user-access'])) {
         header('Location: ../administration.php');
         exit();
     }
+}
+
+if (isset($_POST['cancel-change-user-access'])) {
+    header('Location: ../administration.php');
+    exit();
 }
