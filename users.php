@@ -14,6 +14,7 @@ $pageTitle = 'Users';
 
 require 'includes/header.php';
 ?>
+<div id="posts-wrapper">
 <h2>All Users</h2>
 
 <?php
@@ -56,11 +57,11 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
     }
     ?>
 
-    <article class="post">
+	<article id="users-main">
         <header class="post-header">
-            <a href="posts.php?author=<?php echo $userid; ?>"><?php echo "<b>$username</b>"?></a><?php echo "<br/><i>
-            $ranks[$rRng]</i><br/>Points: $activity"?>
+            <a href="posts.php?author=<?php echo $userid; ?>"><h1><?php echo $username; ?></h1> Points: <?php echo $activity; ?></a>
         </header><!-- .post-header -->
     </article><!-- .post -->
-<?php }
-require 'includes/footer.php';
+<?php }?>
+</div>
+<?php require 'includes/footer.php';

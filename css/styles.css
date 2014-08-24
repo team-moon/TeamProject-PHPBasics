@@ -1,6 +1,6 @@
 @font-face {
 	font-family: alien;
-	src: url(ca.ttf);
+	src: url(../fonts/ca.ttf);
 }
 * {
 	padding: 0;
@@ -541,7 +541,7 @@ body > #wrapper {
 	#facebook {
 		left: 0;
 	display: inline-block;
-	background: url(icons.png);
+	background: url(../images/icons.png);
 	background-position: 0px 0px;
 	width: 45px;
 	height: 48px;
@@ -549,7 +549,7 @@ body > #wrapper {
 	#instagram {
 		left: 0;
 	display: inline-block;
-	background: url(icons.png);
+	background: url(../images/icons.png);
 	background-position: -248px 0px;
 	width: 45px;
 	height: 48px;
@@ -557,7 +557,7 @@ body > #wrapper {
 	#flickr {
 		left: 0;
 	display: inline-block;
-	background: url(icons.png);
+	background: url(../images/icons.png);
 	background-position: 110px 0px;
 	width: 45px;
 	height: 48px;
@@ -565,7 +565,7 @@ body > #wrapper {
 	#twitter {
 		left: 0;
 	display: inline-block;
-	background: url(icons.png);
+	background: url(../images/icons.png);
 	background-position: -490px 0px;
 	width: 45px;
 	height: 48px;
@@ -573,7 +573,7 @@ body > #wrapper {
 	#linkedin {
 		left: 0;
 	display: inline-block;
-	background: url(icons.png);
+	background: url(../images/icons.png);
 	background-position: -367px 0px;
 	width: 45px;
 	height: 48px;

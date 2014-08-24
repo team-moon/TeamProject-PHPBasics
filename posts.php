@@ -14,6 +14,7 @@ $pageTitle = 'Posts';
 
 require 'includes/header.php';
 ?>
+<section id="posts-main">
 <h2>All Posts</h2>
 
 <div id="filter-form">
@@ -204,5 +205,7 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
     </div>
 <?php } else if ($countFilteredPostsWithoutLimit > POSTS_PER_PAGE) {
      require 'includes/pagination.php';
-}
-require 'includes/footer.php';
+}?>
+</section>
+
+<?php require 'includes/footer.php';

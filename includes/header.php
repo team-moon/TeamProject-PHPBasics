@@ -10,7 +10,9 @@ if (existLoggedUser()) {
     <head>
         <meta charset="UTF-8" />
         <title><?php printf('%s | %s', $pageTitle, APPLICATION_NAME); ?></title>
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+		
+		<script src="includes/script.js"></script>
     </head>
     <body>
         <div id="wrapper">
@@ -18,21 +20,6 @@ if (existLoggedUser()) {
                 <h1 id="logo">
                     <a href="index.php"><?php echo APPLICATION_NAME ?></a>
                 </h1>
-
-                <?php if (existLoggedUser()) { ?>                
-                    <div id="hello-user">
-                        <p>Hello, <?php echo $username . ' ' . printAccessLevelName($connection, $_SESSION['accessLevel']); ?> | <a href="processing/logout.php">Logout</a></p>
-                    </div>                
-                <?php } else { ?>
-                    <div id="login-form">
-                        <form method="POST" action="processing/check-user.php" role="form">
-                            <input type="text" name="username" placeholder="username" placeholder="username" required autocomplete="on" />
-                            <input type="password" name="password" placeholder="password" placeholder="password" required />
-                            <input type="submit" name="user-action" value="Login" />
-                        </form>
-                    </div>
-                <?php } ?>
-            </header><!-- #header -->
 
             <?php if (existLoggedUser()) { ?>
                 <?php $countAllPosts = countAllPosts($connection); ?>
@@ -61,15 +48,69 @@ if (existLoggedUser()) {
                         </li>
                         <?php } ?>
                     </ul>
+					<div id="search-box">
+						<form method="POST" action="search.php" role="form">
+							<input type="text" name="searchText" placeholder="search..." required />
+							<input type="submit" name="search" value="Search" />
+						</form>
+					</div><!-- #search-box -->
                 </nav><!-- #main-nav -->
             <?php } ?>
-			<br>
-			<div id="search-box">
-                    <form method="POST" action="search.php" role="form">
-                        <input type="text" name="searchText" placeholder="search..." required />
-                        <input type="submit" name="search" value="Search" />
-                    </form>
-                </div><!-- #search-box -->
+			 </header><!-- #header -->
+			 
+			<div id="asides">
+			<aside>
+				<?php if (existLoggedUser()) { ?>       
+					<header>User Panel</header>				
+                    <div id="hello-user">
+                        <p>Hello, <?php echo $username . ' ' . printAccessLevelName($connection, $_SESSION['accessLevel']); ?></p>
+						<hr>
+						<ul>
+                	        <li><a href="">POSTS</a></li>
+                	        <li><a href="add-post.php">ADD POST</a></li>
+                	        <li><a href="">ACCOUNT</a></li>
+						</ul>               
+						<hr>
+                    <a href="processing/logout.php">Logout</a>
+					</div>                
+                <?php } else { ?>
+					<header>Log In</header>
+                    <div id="log_in">
+                        <form method="POST" action="processing/check-user.php" role="form">
+                            <input type="text" name="username" placeholder="username" placeholder="username" required autocomplete="on" />
+                            <input type="password" name="password" placeholder="password" placeholder="password" required />
+                            <input type="submit" name="user-action" value="Login" />
+                        </form>
+						<br>
+						<a href="#" onclick="openSignIn()">Don't have an account? Sign up!</a>
+                    </div>
+					<div id="sign_up">
+						<div>Sign Up:</div>
+						<form action="" method="post">
+							<input type="text" name="sign_up_user_name" placeholder="User Name...">
+							<br>
+							<input type="password" name="sign_up_password" placeholder="Password...">
+							<br>
+							<input type="text" name="repeat_sign_up_password" placeholder="Repeat Password...">
+							<br>
+							<input type="submit" value="Sign Up">
+						</form>
+					</div>
+                <?php } ?>
+			</aside>
+			<aside>
+				<header>Our Friends</header>
+				<div id="friends_links">
+					<ul>
+						<li><a href="#">Sofware University</a></li>
+						<li><a href="">TBD</a></li>
+						<li><a href="">TBD</a></li>
+						<li><a href="">TBD</a></li>
+						<li><a href="">TBD</a></li>
+					</ul>
+				</div>
+			</aside>
+			</div>
 
             <div id="content">
                 <?php
