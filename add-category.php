@@ -19,20 +19,21 @@ $pageTitle = 'Add Category';
 
 require 'includes/header.php';
 ?>
+<section id="posts-main">
+	<h2>Add New Category</h2>
 
-<h2>Add New Category</h2>
-
-<div id="add-category-form">
-    <form method="POST" action="processing/manage-categories.php" role="form">
-        <p>
-            <label for="category">Category: </label>
-            <input id="category" type="text" name="category" required />
-        </p>
-        <p>
-            <input type="submit" name="add-category" value="Add" />
-        </p>
-    </form>
-</div><!-- #add-category-form -->
+	<div id="add-category-form">
+		<form method="POST" action="processing/manage-categories.php" role="form">
+			<p>
+				<label for="category">Category: </label>
+				<input id="category" type="text" name="category" required />
+			</p>
+			<p>
+				<input type="submit" name="add-category" value="Add" />
+			</p>
+		</form>
+	</div><!-- #add-category-form -->
+</section>
 
 <?php
 require 'includes/footer.php';

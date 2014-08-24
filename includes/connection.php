@@ -4,7 +4,7 @@
 define('SQL_HOST', 'localhost');
 define('SQL_USER', 'root');
 define('SQL_PASS', '');
-define('SQL_DB', 'message_board_db');
+define('SQL_DB', 'moon');
 
 $connection = mysqli_connect(SQL_HOST, SQL_USER, SQL_PASS, SQL_DB);
 

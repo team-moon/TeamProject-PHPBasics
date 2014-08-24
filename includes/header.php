@@ -66,9 +66,9 @@ if (existLoggedUser()) {
                         <p>Hello, <?php echo $username . ' ' . printAccessLevelName($connection, $_SESSION['accessLevel']); ?></p>
 						<hr>
 						<ul>
-                	        <li><a href="">POSTS</a></li>
+                	        <li><a href="index.php">POSTS</a></li>
                 	        <li><a href="add-post.php">ADD POST</a></li>
-                	        <li><a href="">ACCOUNT</a></li>
+                	        <li><a href="account.php">ACCOUNT</a></li>
 						</ul>               
 						<hr>
                     <a href="processing/logout.php">Logout</a>

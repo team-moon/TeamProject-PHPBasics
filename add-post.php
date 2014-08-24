@@ -31,9 +31,8 @@ if (isset($_SESSION['temp-title']) &&
 }
 ?>
 
-<h2>Add New Post</h2>
-
 <div id="add-post-form">
+	<h2>Add New Post</h2>
     <form method="POST" action="processing/manage-post.php" role="form">
         <p>
             <label for="title">Title: </label>
