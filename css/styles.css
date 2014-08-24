@@ -578,3 +578,33 @@ body > #wrapper {
 	width: 45px;
 	height: 48px;
 	}
+
+
+	/*//////////PAGINATION//////////*/
+
+
+	#pagination {
+
+	}
+	#pagination > ul {
+		list-style-type: none;
+	}
+	#pagination > ul > li {
+		display: inline-block;
+		margin-left: 10px;
+		margin-right: 10px;
+		background-color: grey;
+		border: 1px solid white;
+	}
+	#pagination > ul > li:hover {
+		background-color: darkgrey;
+		cursor: pointer;
+	}
+	#pagination > ul > li > a {
+		text-decoration: none;
+		color: black;
+		font-weight: bold
+	}
+	#pagination > ul > li > a:hover {
+		
+	}
