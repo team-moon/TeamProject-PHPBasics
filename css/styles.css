@@ -615,3 +615,7 @@ body > #wrapper {
 	#pagination > ul > li > a:hover {
 		
 	}
+	.current-page {
+		background-color: black;
+		color: white;
+	}
