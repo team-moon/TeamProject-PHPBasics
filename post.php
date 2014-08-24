@@ -61,7 +61,7 @@ $sql = 'SELECT * FROM messages WHERE message_id=' . $messageId;
     if(!$sql){
         echo 'Error in the SQL DB';
     }
-    echo'<article id="home-article">   
+    echo'<section id="posts-main"><article id="home-article">   
     <header>       
         <h2>Topic: '.$row['title'].'</h2>   
     </header>
@@ -106,5 +106,6 @@ $sql = 'SELECT * FROM messages WHERE message_id=' . $messageId;
     }
     else{
         echo '<div style="text-align: center;"><a href="login.php" style="color: red!important;font-size: 28px;">Please log in to your profile before commenting</a></div>';
-    }
-require 'includes/footer.php';
+    }?>
+	</section>
+<?php require 'includes/footer.php';
