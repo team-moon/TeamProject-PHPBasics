@@ -30,10 +30,6 @@ body > #wrapper {
 	font-family: alien;
 	padding: 10px;
 }
-#wrapper > header > #logo > a {
-	text-decoration: none;
-	color: white;
-}
 #wrapper > header > nav {
 	background-color: black;
 	text-align: left;
@@ -154,21 +150,21 @@ body > #wrapper {
 	color: grey;
 }
 
-#sign_up {
+#wrapper > #asides > aside > #sign_up {
 	text-align: left;
 	padding: 15px;
 	display: none;
 }
-#sign_up > div {
+#wrapper > #asides > aside > #sign_up > div {
 	color: white;
 	font-weight: bold;
 	font-size: 1.5em;
 }
-#sign_up > form {
+#wrapper > #asides > aside > #sign_up > form {
 	display: inline-block;
 	margin-top: 10px;
 }
-#sign_up > form > input[type="text"], input[type="password"] {
+#wrapper > #asides > aside > #sign_up > form > input[type="text"], input[type="password"] {
 	border: 1px solid black;
 	height: 30px;
 	padding-left: 10px;
@@ -176,7 +172,7 @@ body > #wrapper {
 	margin: 2px;
 	width: 150%;
 }
-#sign_up > form > input[type="submit"] {
+#wrapper > #asides > aside > #sign_up > form > input[type="submit"] {
 	background-color: lightgrey;
 	text-align: left;
 	padding: 5px;
@@ -187,15 +183,15 @@ body > #wrapper {
 	font-weight: bold;
 	text-align: center;
 }
-#sign_up > form > input[type="submit"]:hover {
+#wrapper > #asides > aside > #sign_up > form > input[type="submit"]:hover {
 	background-color: grey;
 	cursor: pointer;
 }
-#sign_up > a {
+#wrapper > #asides > aside > #sign_up > a {
 	display: inline-block;
 	color: white;
 }
-#sign_up > a:hover {
+#wrapper > #asides > aside > #sign_up > a:hover {
 	color: grey;
 }
 
@@ -520,7 +516,6 @@ body > #wrapper {
 		width: 100%;	
 	}
 	footer > #footer-site {
-		background-color: black;
 		display: inline-block;
 		font-family: alien;
 		color: white;
@@ -529,7 +524,6 @@ body > #wrapper {
 		padding-left: 30px;
 	}
 	footer > div.social {
-		background-color: black;
 		display: inline-block;
 		margin-left: 160px;
 	}

@@ -1,4 +1,5 @@
-            </main>
+            </div><!-- #content -->
+
             <footer>
 			<div id="footer-site">
 				Team Moon 2014&copy;. All Rights Reserved.
