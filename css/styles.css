@@ -588,16 +588,19 @@ body > #wrapper {
 	}
 	#pagination > ul {
 		list-style-type: none;
+		margin-left: 20px;
+		margin-top: 20px;
 	}
 	#pagination > ul > li {
-		display: inline-block;
-		margin-left: 10px;
-		margin-right: 10px;
-		background-color: grey;
-		border: 1px solid white;
-		padding: 10px;
-		width: 60px;
-		height: 20px;
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 10px;
+	background-color: grey;
+	border: 1px solid white;
+	padding: 10px;
+	width: 85px;
+	height: 20px;
+	margin-bottom: 14px;
 	}
 	#pagination > ul > li:hover {
 		background-color: darkgrey;
