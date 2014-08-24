@@ -595,6 +595,9 @@ body > #wrapper {
 		margin-right: 10px;
 		background-color: grey;
 		border: 1px solid white;
+		padding: 10px;
+		width: 60px;
+		height: 20px;
 	}
 	#pagination > ul > li:hover {
 		background-color: darkgrey;
@@ -603,7 +606,8 @@ body > #wrapper {
 	#pagination > ul > li > a {
 		text-decoration: none;
 		color: black;
-		font-weight: bold
+		font-weight: bold;
+		font-size: 1.1em;
 	}
 	#pagination > ul > li > a:hover {
 		

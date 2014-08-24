@@ -5,7 +5,7 @@ require 'includes/config.php';
 require 'includes/connection.php';
 require 'includes/functions.php';
 
-if (!existLoggedUser()) {
+if (existLoggedUser()) {
     header('Location: index.php');
     exit();
 }
