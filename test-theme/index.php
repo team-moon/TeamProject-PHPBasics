@@ -19,7 +19,7 @@
 
 		<div id="asides">
 			<aside>
-				<?php if (!existLoggedUser()) { ?>                
+				<?php if (existLoggedUser()) { ?>                
                     <header>User Panel</header>
                     <div id="hello-user">
                         <p>Hello, <?php echo $username . ' ' ?></p>

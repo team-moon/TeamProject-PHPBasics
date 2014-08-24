@@ -1,5 +1,6 @@
-            </main>
-            <footer>
+		</main>
+
+		<footer>
 			<div id="footer-site">
 				Team Moon 2014&copy;. All Rights Reserved.
 			</div>
@@ -12,7 +13,7 @@
 					<li><a href="#" id="flickr"></a></li>
 				</ul>
 			</div>
-		</footer><!-- #footer -->
-        </div><!-- #wrapper -->
-    </body>
+		</footer>
+	</div>
+</body>
 </html>
