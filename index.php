@@ -20,28 +20,29 @@ if (isset($_SESSION['temp-username'])) {
     $username = '';
 }
 ?>
-
+<section id="posts-main">
 <h2><?php echo $pageTitle; ?></h2>
 
-<div id="signup-form">
-    <form method="POST" action="processing/check-user.php" role="form">
-        <p>
-            <label for="username">Username: </label>
-            <input id="username" type="text" name="username" required autocomplete="off" value="<?php echo $username; ?>" />
-        </p>
-        <p>
-            <label for="password">Password: </label>
-            <input id="password" type="password" name="password" required />
-        </p>
-        <p>
-            <label for="reenter-password">Re-enter password: </label>
-            <input id="reenter-password" type="password" name="reenter-password" required />
-        </p>
-        <p>
-            <input type="submit" name="user-action" value="SignUp" />
-        </p>
-    </form>
-</div><!-- #signup-form -->
+	<div id="signup-form">
+		<form method="POST" action="processing/check-user.php" role="form">
+			<p>
+				<label for="username">Username: </label>
+				<input id="username" type="text" name="username" required autocomplete="off" value="<?php echo $username; ?>" />
+			</p>
+			<p>
+				<label for="password">Password: </label>
+				<input id="password" type="password" name="password" required />
+			</p>
+			<p>
+				<label for="reenter-password">Re-enter password: </label>
+				<input id="reenter-password" type="password" name="reenter-password" required />
+			</p>
+			<p>
+				<input type="submit" name="user-action" value="SignUp" />
+			</p>
+		</form>
+	</div><!-- #signup-form -->
+</section>
 
 <?php
 if (isset($_SESSION['temp-username'])) {
