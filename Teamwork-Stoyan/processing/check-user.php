@@ -42,7 +42,7 @@ switch ($userAction) {
         if ($query->num_rows == 1) {
             $row = $query->fetch_assoc();
 
-            if ($username == $row['name'] && $password == $row['passwd']) {
+            if ($username == $row['name'] && password_verify($hashedPassword, $row['passwd'])) {
                 keepDataForLoggedUser($row['user_id'], $row['name'], $row['access_lvl']);
                 header('Location: ../posts.php');
                 exit();
@@ -68,8 +68,12 @@ switch ($userAction) {
             exit();
         }
 
+        // Added by Stoyan - Hashing passwords
+
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
         $sql = "INSERT INTO `users`
-                VALUES (NULL, '" . $username . "', '" . $password . "', DEFAULT)";
+                VALUES (NULL, '" . $username . "', '" . $hashedPassword . "', DEFAULT)";
 
         $query = mysqli_query($connection, $sql);
 
