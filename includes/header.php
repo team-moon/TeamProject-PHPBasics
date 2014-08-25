@@ -1,12 +1,16 @@
 <?php
+require 'includes/config.php';
+require 'includes/connection.php';
+require 'includes/functions.php';
+require 'includes/messages.php';
+
 if (existLoggedUser()) {
     $username = $_SESSION['username'];
     $userId = $_SESSION['userId'];
 }
-if(!($_SESSION['accessLevel'])) {
+if(!isset($_SESSION['accessLevel'])) {
     $_SESSION['accessLevel'] = 0;
 }
-require 'includes/connection.php';
 ?>
 
 <!DOCTYPE html>

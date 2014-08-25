@@ -1,18 +1,17 @@
 <?php
 session_start();
+$pageTitle = 'Account';
 
+require 'includes/header.php';
+/*
 require 'includes/config.php';
 require 'includes/connection.php';
 require 'includes/functions.php';
-
+*/
 if (!existLoggedUser()) {
     header('Location: index.php');
     exit();
 }
-
-$pageTitle = 'Account';
-
-require 'includes/header.php';
 ?>
 <div id="add-post-form">
 	<h2>Manage Account</h2>

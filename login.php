@@ -1,18 +1,17 @@
 <?php
 session_start();
 session_regenerate_id(true);
+$pageTitle = 'Login';
 
+require 'includes/header.php';
+/*
 require 'includes/config.php';
 require 'includes/functions.php';
-
+*/
 if (existLoggedUser()) {
     header('Location: posts.php');
     exit();
 }
-
-$pageTitle = 'Login';
-
-require 'includes/header.php';
 
 if (isset($_SESSION['temp-username'])) {
     $username = $_SESSION['temp-username'];

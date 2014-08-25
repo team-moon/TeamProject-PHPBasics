@@ -1,13 +1,14 @@
 <?php
 session_start();
-
-require 'includes/config.php';
-require 'includes/connection.php';
-require 'includes/functions.php';
-
 $pageTitle = 'Users';
 
 require 'includes/header.php';
+/*
+require 'includes/config.php';
+require 'includes/connection.php';
+require 'includes/functions.php';
+*/
+
 ?>
 <div id="posts-wrapper">
 <h2>All Users</h2>

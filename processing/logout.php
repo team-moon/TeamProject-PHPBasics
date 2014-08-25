@@ -2,7 +2,7 @@
 
 session_start();
 
-require '../includes/functions.php';
+require_once '../includes/functions.php';
 
 if (!existLoggedUser()) {
     header('Location: ../index.php');

@@ -1,10 +1,13 @@
 <?php
 session_start();
+$pageTitle = 'Administration';
 
+require 'includes/header.php';
+/*
 require 'includes/config.php';
 require 'includes/connection.php';
 require 'includes/functions.php';
-
+*/
 if (!existLoggedUser()) {
     header('Location: index.php');
     exit();
@@ -15,9 +18,7 @@ if ($_SESSION['accessLevel'] < 3) {
     exit();
 }
 
-$pageTitle = 'Administration';
 
-require 'includes/header.php';
 ?>
 <div id="add-post-form">
 	<h2>Administration page</h2>

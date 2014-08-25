@@ -1,18 +1,19 @@
 <?php
 session_start();
+$pageTitle = 'Add Post';
 
+require 'includes/header.php';
+/*
 require 'includes/config.php';
 require 'includes/connection.php';
 require 'includes/functions.php';
-
+*/
 if (!existLoggedUser()) {
     header('Location: index.php');
     exit();
 }
 
-$pageTitle = 'Add Post';
 
-require 'includes/header.php';
 
 if (isset($_SESSION['temp-title']) &&
     isset($_SESSION['temp-categoryId']) &&

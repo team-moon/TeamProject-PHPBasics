@@ -1,13 +1,14 @@
 <?php
 session_start();
-
-require 'includes/config.php';
-require 'includes/connection.php';
-require 'includes/functions.php';
-
 $pageTitle = 'Post';
 
 require 'includes/header.php';
+/*
+require 'includes/config.php';
+require 'includes/connection.php';
+require 'includes/functions.php';
+*/
+
 
 if (isset($_GET['id'])) {
     $messageId = (int) $_GET['id'];

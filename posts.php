@@ -1,13 +1,14 @@
 <?php
 session_start();
-
-require 'includes/config.php';
-require 'includes/connection.php';
-require 'includes/functions.php';
-
 $pageTitle = 'Posts';
 
 require 'includes/header.php';
+/*
+require 'includes/config.php';
+require 'includes/connection.php';
+require 'includes/functions.php';
+*/
+
 ?>
 <section id="posts-main">
 <h2>All Posts</h2>

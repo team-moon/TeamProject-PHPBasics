@@ -2,10 +2,10 @@
 
 session_start();
 
-require '../includes/config.php';
-require '../includes/connection.php';
-require '../includes/functions.php';
-require '../includes/messages.php';
+require_once '../includes/config.php';
+require_once '../includes/connection.php';
+require_once '../includes/functions.php';
+require_once '../includes/messages.php';
 
 // If the user does not have enough access
 // level forward the user to the index page

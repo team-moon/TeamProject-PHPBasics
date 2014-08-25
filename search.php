@@ -1,14 +1,12 @@
 <?php
 session_start();
-
-require 'includes/config.php';
-require 'includes/connection.php';
-require 'includes/functions.php';
-require 'includes/messages.php';
-
 $pageTitle = 'Search';
 
 require 'includes/header.php';
+//require 'includes/config.php';
+//require 'includes/connection.php';
+//require 'includes/functions.php';
+//require 'includes/messages.php';
 
 if (!isset($_POST['search'])) {
     header('Location: index.php');
