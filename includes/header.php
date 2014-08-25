@@ -3,6 +3,10 @@ if (existLoggedUser()) {
     $username = $_SESSION['username'];
     $userId = $_SESSION['userId'];
 }
+if(!($_SESSION['accessLevel'])) {
+    $_SESSION['accessLevel'] = 0;
+}
+require 'includes/connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +25,7 @@ if (existLoggedUser()) {
                     <a href="index.php"><?php echo APPLICATION_NAME ?></a>
                 </h1>
 
-                
+                <?php $countAllPosts = countAllPosts($connection); ?>
                 <nav id="main-nav" role="navigation">
                     <ul>
                         <li>
