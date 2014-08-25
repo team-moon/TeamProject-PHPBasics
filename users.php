@@ -48,7 +48,6 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
     $userid = $row['user_id'];
     $username = $row['name'];
     $activity = $row['activity'];
-    $ranks = ['Beginner','Advanced','Master','Guru','PHP NINJA'];
     if($activity < 40){
     $rRng = $activity / 10;
     }

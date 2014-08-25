@@ -46,6 +46,12 @@ require 'includes/header.php';
 				require 'admin/admin-category.php';
 			?>
 		</div>
+        <div id="ranks-administration">
+            <h3>Ranks administration</h3>
+            <?php
+            require 'admin/admin-ranks.php';
+            ?>
+        </div>
 	</div><!-- #admin-form -->
 </section>
 <?php

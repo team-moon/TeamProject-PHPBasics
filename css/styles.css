@@ -250,6 +250,17 @@ body > #wrapper {
 #wrapper > #asides > aside > #hello-user > ul > li > a:hover {
 	color: grey;
 }
+#wrapper  #ranks-administration input[type='number']{
+    width:45px;
+
+}
+#wrapper  #ranks-administration input[type='button']{
+    width:20px;
+}
+#wrapper  #ranks-administration label{
+    color:white;
+    padding-right: 85px;
+}
 
 /* ////// USERS /////*/
 #posts-wrapper {
