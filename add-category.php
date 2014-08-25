@@ -19,10 +19,8 @@ $pageTitle = 'Add Category';
 
 require 'includes/header.php';
 ?>
-<section id="posts-main">
+<div id="add-post-form">
 	<h2>Add New Category</h2>
-
-	<div id="add-category-form">
 		<form method="POST" action="processing/manage-categories.php" role="form">
 			<p>
 				<label for="category">Category: </label>
@@ -32,8 +30,7 @@ require 'includes/header.php';
 				<input type="submit" name="add-category" value="Add" />
 			</p>
 		</form>
-	</div><!-- #add-category-form -->
-</section>
+</div><!-- #add-post-form -->
 
 <?php
 require 'includes/footer.php';

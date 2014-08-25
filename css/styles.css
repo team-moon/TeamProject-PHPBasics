@@ -125,7 +125,7 @@ body > #wrapper {
 	padding-left: 10px;
 	outline: none;
 	margin: 2px;
-	width: 150%;
+	width: 100%;
 }
 #wrapper > #asides > aside > #log_in > form > input[type="submit"] {
 	background-color: lightgrey;
@@ -170,7 +170,7 @@ body > #wrapper {
 	padding-left: 10px;
 	outline: none;
 	margin: 2px;
-	width: 150%;
+	width: 100%;
 }
 #wrapper > #asides > aside > #sign_up > form > input[type="submit"] {
 	background-color: lightgrey;
@@ -628,6 +628,5 @@ body > #wrapper {
 		
 	}
 	.current-page {
-		background-color: black;
-		color: white;
+		color: white!important;
 	}

@@ -19,7 +19,7 @@ $pageTitle = 'Administration';
 
 require 'includes/header.php';
 ?>
-<section id="posts-main">
+<div id="add-post-form">
 	<h2>Administration page</h2>
 	<div id="admin-form">
 		<div id="user-administration">
@@ -53,7 +53,7 @@ require 'includes/header.php';
             ?>
         </div>
 	</div><!-- #admin-form -->
-</section>
+</div>
 <?php
 unset($_SESSION['temp-post-title']);
 unset($_SESSION['temp-post-datePublished']);

@@ -14,10 +14,9 @@ $pageTitle = 'Account';
 
 require 'includes/header.php';
 ?>
-<section id="posts-main">
+<div id="add-post-form">
 	<h2>Manage Account</h2>
 
-	<div id="change-passwd-form">
 		<form method="POST" action="processing/manage-account.php" role="form">
 			<p>
 				<label for="old-password">Old password: </label>
@@ -31,7 +30,6 @@ require 'includes/header.php';
 				<input type="submit" name="change-password" value="Change" />
 			</p>
 		</form>
-	</div><!-- #change-passwd-form -->
-</section>
+</div>
 <?php
 require 'includes/footer.php';
