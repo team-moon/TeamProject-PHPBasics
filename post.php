@@ -5,11 +5,6 @@ require 'includes/config.php';
 require 'includes/connection.php';
 require 'includes/functions.php';
 
-if (!existLoggedUser()) {
-    header('Location: index.php');
-    exit();
-}
-
 $pageTitle = 'Post';
 
 require 'includes/header.php';
