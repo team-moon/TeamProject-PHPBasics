@@ -6,11 +6,6 @@ require 'includes/connection.php';
 require 'includes/functions.php';
 require 'includes/messages.php';
 
-if (!existLoggedUser()) {
-    header('Location: index.php');
-    exit();
-}
-
 $pageTitle = 'Search';
 
 require 'includes/header.php';
@@ -30,6 +25,7 @@ $searchText = safeInput($_POST['searchText']);
 $searchText = mysqli_escape_string($connection, $searchText);
 ?>
 
+<div id="add-post-form">
 <h2>Search results for <span>"<?php echo $searchText; ?>"</span></h2>
 
 <?php
@@ -90,6 +86,6 @@ if (existSearchResults($connection, $searchText, $messages)) {
 <?php } else { ?>
     <p>There was no any question matching your search.</p>
 <?php } ?>
-
+</div>
 <?php
 require 'includes/footer.php';
