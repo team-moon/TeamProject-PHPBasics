@@ -21,7 +21,7 @@ if (existLoggedUser()) {
                     <a href="index.php"><?php echo APPLICATION_NAME ?></a>
                 </h1>
 
-                <?php $countAllPosts = countAllPosts($connection); ?>
+                
                 <nav id="main-nav" role="navigation">
                     <ul>
                         <li>
