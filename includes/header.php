@@ -21,7 +21,6 @@ if (existLoggedUser()) {
                     <a href="index.php"><?php echo APPLICATION_NAME ?></a>
                 </h1>
 
-            <?php if (existLoggedUser()) { ?>
                 <?php $countAllPosts = countAllPosts($connection); ?>
                 <nav id="main-nav" role="navigation">
                     <ul>
@@ -31,12 +30,16 @@ if (existLoggedUser()) {
 						<li>
                             <a <?php checkForCurrentPage($pageTitle, 'Users') ?> href="users.php">Users</a>
                         </li>
+						<?php if($_SESSION['accessLevel'] > 1) { ?>
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Add Post') ?> href="add-post.php">Add Post</a>
                         </li>
+						<?php } ?>
+						<?php if($_SESSION['accessLevel'] > 1) { ?>
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Account') ?> href="account.php">Account</a>
                         </li>
+						<?php } ?>
                         <?php if($_SESSION['accessLevel'] > 1) { ?>
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Add Category') ?> href="add-category.php">Add Category</a>
@@ -55,7 +58,6 @@ if (existLoggedUser()) {
 						</form>
 					</div><!-- #search-box -->
                 </nav><!-- #main-nav -->
-            <?php } ?>
 			 </header><!-- #header -->
 			 
 			<div id="asides">
