@@ -82,7 +82,7 @@ if (existLoggedUser()) {
                             <input type="submit" name="user-action" value="Login" />
                         </form>
 						<br>
-						<a href="#" onclick="openSignIn()">Don't have an account? Sign up!</a>
+						<a href="register.php">Don't have an account? Sign up!</a>
                     </div>
 					<div id="sign_up">
 						<div>Sign Up:</div>

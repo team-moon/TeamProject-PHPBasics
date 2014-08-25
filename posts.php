@@ -5,11 +5,6 @@ require 'includes/config.php';
 require 'includes/connection.php';
 require 'includes/functions.php';
 
-if (!existLoggedUser()) {
-    header('Location: index.php');
-    exit();
-}
-
 $pageTitle = 'Posts';
 
 require 'includes/header.php';
@@ -180,26 +175,26 @@ $countFilteredPostsWithoutLimit = $queryWithoutLimit->num_rows;
             in <a href="posts.php?cat=<?php echo $categoryId; ?>" title="View all posts in <?php echo $categoryName; ?>"><?php echo $categoryName; ?></a> <?php if(!$tags == ""){echo "with tags:  $tags";} ?>
 
             <!-- Added by Stoyan -->
-            <?php if ($countAllPosts > 0 && $countFilteredPosts > 0) { ?>
+            <?php if (isset($countFilteredPostsWithoutLimit) > 0 && $countFilteredPosts > 0) { ?>
                 <div class="counterVisits">
                     <?php echo '<span>' . 'Topic visits: ' . $visitsCount . '</span>' ?>
                 </div>
             <?php } ?>
             <!-- Until here -->
 
-            <?php if ($_SESSION['accessLevel'] > 1) { ?>            
+            <?php if (isset($_SESSION['accessLevel']) > 1) { ?>            
                 ( <a class="delete" href="processing/delete.php?post=<?php echo $messageId; ?>" title="Delete this post">delete</a> )
             <?php } ?>
         </footer><!-- .post-footer -->
     </article><!-- .post -->
 <?php } ?>
 
-<?php if ($countAllPosts == 0) { ?>
+<?php if ($countFilteredPostsWithoutLimit == 0) { ?>
     <div class="no-posts">
         Currently there are no posts. Be the one to make first post
         <a title="Add Post" href="add-post.php">here</a>.
     </div>
-<?php } else if ($countAllPosts > 0 && $countFilteredPosts == 0) { ?>
+<?php } else if ($countFilteredPostsWithoutLimit > 0 && $countFilteredPosts == 0) { ?>
     <div class="no-posts">
         There are no posts for your filter criterion.
     </div>
