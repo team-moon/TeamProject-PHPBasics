@@ -623,6 +623,8 @@ body > #wrapper {
 		color: black;
 		font-weight: bold;
 		font-size: 1.1em;
+		display: block;
+		width: 100%;
 	}
 	#pagination > ul > li > a:hover {
 		
