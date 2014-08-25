@@ -71,7 +71,7 @@ switch ($userAction) {
         }
 
         $sql = "INSERT INTO `users`
-                VALUES (NULL, '" . $username . "', '" . $password . "', DEFAULT)";
+                VALUES (NULL, '" . $username . "', '" . $password . "', DEFAULT, 0)";
 
         $query = mysqli_query($connection, $sql);
 
