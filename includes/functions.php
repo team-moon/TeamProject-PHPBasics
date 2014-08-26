@@ -268,6 +268,7 @@ function getAllUsers($connection, $includeCurrentUser = true) {
     }
 
     $query = mysqli_query($connection, $sql);
+    $users = null;
 
     while ($row = $query->fetch_assoc()) {
         $users['user_id'][] = $row['user_id'];
@@ -629,7 +630,6 @@ function deleteComment($connection, $id) {
             WHERE `comment_id` = '" . $id . "'";
 
     $query = mysqli_query($connection, $sql);
-
 }
 function changeComment($connection, $id, $commentDate, $commentText, $messages) {
     $id = mysqli_real_escape_string($connection, $id);
@@ -640,13 +640,4 @@ function changeComment($connection, $id, $commentDate, $commentText, $messages) 
             WHERE `comment_id` = '" . $id . "'";
 
     $query = mysqli_query($connection, $sql);
-
-    $_SESSION['messages'] = $messages['successfullUpdate'];
-    unset($_SESSION['$post-comments']);
-    unset($_SESSION['current-post-comments']);
-    unset($_SESSION['temp-comment-date']);
-    unset($_SESSION['temp-comment-text']);
-    unset($_SESSION['current-comment-id']);
-    header('Location: ../administration.php');
-    exit();
 }
