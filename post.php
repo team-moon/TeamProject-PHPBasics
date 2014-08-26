@@ -95,7 +95,7 @@ $sql = 'SELECT * FROM messages WHERE message_id=' . $messageId;
         echo '<form method="POST" class="styledForm" action="#" >
             <fieldset>
                 <legend>Comment</legend>
-                <input type="text" name="comment_content" /><br />
+                <input type="text" name="comment_content" />
                 <input type="submit" name="comment" value="Submit" />
             </fieldset>
         </form>';
