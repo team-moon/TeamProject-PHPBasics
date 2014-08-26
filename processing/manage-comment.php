@@ -45,7 +45,7 @@ if (isset($_POST['show-comment']) || isset($_POST['delete-comment'])) {
 
     if (isset($_POST['delete-comment'])) {
         deleteComment($connection, $cId);
-        unset($_SESSION['$post-comments']);
+        unset($_SESSION['post-comments']);
         unset($_SESSION['current-post-comments']);
         $_SESSION['messages'] = $messages['commentDeleted'];
         header('Location: ../administration.php');
@@ -84,9 +84,17 @@ if (isset($_POST['change-comment-data'])) {
         $commentText = mysqli_real_escape_string($connection, $commentText);
 
         changeComment($connection, $id, $commentDate, $commentText, $messages);
+        $_SESSION['messages'] = $messages['successfullUpdate'];
+        unset($_SESSION['post-comments']);
+        unset($_SESSION['current-post-comments']);
+        unset($_SESSION['temp-comment-date']);
+        unset($_SESSION['temp-comment-text']);
+        unset($_SESSION['current-comment-id']);
+        header('Location: ../administration.php');
+        exit();
     } else {
         $_SESSION['messages'] = $messages['noSuchPost'];
-        unset($_SESSION['$post-comments']);
+        unset($_SESSION['post-comments']);
         unset($_SESSION['current-post-comments']);
         unset($_SESSION['temp-comment-date']);
         unset($_SESSION['temp-comment-text']);
@@ -97,7 +105,7 @@ if (isset($_POST['change-comment-data'])) {
 }
 
 if (isset($_POST['cancel-comment-data'])) {
-    unset($_SESSION['$post-comments']);
+    unset($_SESSION['post-comments']);
     unset($_SESSION['current-post-comments']);
     unset($_SESSION['temp-comment-date']);
     unset($_SESSION['temp-comment-text']);

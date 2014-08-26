@@ -26,7 +26,8 @@
         }
     ?>
         <div id="choose-comments">
-            <?php $comments = getPostComments($connection, $_SESSION['current-post-comments']); ?>
+            <?php $comments = getPostComments($connection, $_SESSION['current-post-comments']);
+            if($comments != null && count($comments['comment_id']) > 0) { ?>
             <select name="comment" required >
                 <option value="choose comment">Choose Comment</option>
 
@@ -38,6 +39,12 @@
             </select>
             <input type="submit" name="show-comment" value="Show" /> or
             <input type="submit" name="delete-comment" value="Delete" />
+            <?php } else { ?>
+                <p class="error-msg">This post has no comments to administrate!</p>
+            <?php
+                unset($_SESSION['post-comments']);
+                unset($_SESSION['current-post-comments']);
+            } ?>
         </div><!-- #choose-comments -->
 
         <?php
