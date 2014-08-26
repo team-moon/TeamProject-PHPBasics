@@ -26,7 +26,7 @@ if(!isset($_SESSION['accessLevel'])) {
         <div id="wrapper">
             <header id="header">
                 <h1 id="logo">
-                    <a href="index.php"><?php echo APPLICATION_NAME ?></a>
+                    <a href="index.php">Team moon's awesome forum</a>
                 </h1>
 
                 <?php $countAllPosts = countAllPosts($connection); ?>

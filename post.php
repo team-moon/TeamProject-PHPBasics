@@ -66,7 +66,7 @@ $sql = 'SELECT * FROM messages WHERE message_id=' . $messageId;
     </p>
     </article>';
     echo '<div id="messages-content">';
-    echo '<hr><span class="message-author"><h5>Comments:</h5>';
+    echo '<span class="message-author"><h5>Comments:</h5>';
     
     $sql = 'SELECT * FROM comments
         LEFT JOIN users

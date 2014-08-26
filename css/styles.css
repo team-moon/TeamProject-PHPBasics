@@ -22,9 +22,11 @@ body > #wrapper {
 	color: white;
 	box-shadow: 0px 0px 20px black;
 }
-#wrapper > header > #logo {
+#wrapper > header > #logo > a {
 	display: inline-block;
-	font-size: 2.2em;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: white;
 	font-weight: bold;
 	vertical-align: top;
 	font-family: alien;
@@ -631,4 +633,35 @@ body > #wrapper {
 	}
 	.current-page {
 		color: white!important;
+	}
+
+
+	/*////////POST//////*/
+
+	#home-article {
+		padding: 20px;
+		background-color: lightgrey;
+		margin: 20px;
+		box-shadow: 0px 0px 20px;
+	}
+	#home-article > header > h2 {
+		color: black;
+		font-size: 2.2em;
+		text-decoration: underline;
+	}
+	#home-article > p {
+		margin-top: 40px;
+		color: black;
+		font-size: 1.2em;
+	}
+	#messages-content {
+		margin: 20px;
+		background-color: lightgrey;
+		box-shadow: 0px 0px 20px;
+		padding: 20px;
+	}
+	#messages-content h5 {
+		font-size: 2em;
+		display: inline-block;
+		margin-bottom: 20px; 
 	}
