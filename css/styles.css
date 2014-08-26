@@ -735,3 +735,28 @@ body > #wrapper {
 		background-color: lightgrey;
 	}
 	
+
+.error-msg {
+	color: red;
+	font-weight: bold;
+	border: 2px solid red;
+	margin-left: 170px;
+	margin-top: 20px; 
+	display: inline-block;
+	width: 65%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.success-msg {
+	color: green;
+	font-weight: bold;
+	border: 2px solid green;
+	margin-left: 170px;
+	margin-top: 20px; 
+	display: inline-block;
+	width: 65%;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
