@@ -1,6 +1,7 @@
 <form method="POST" action="processing/manage-administration.php" role="form">
     <div id="choose-user">
-        <?php $users = getAllUsers($connection, false); ?>
+        <?php $users = getAllUsers($connection, false);
+            if($users != null && count($users['user_id']) > 0) { ?>
         <select name="user">
             <option value="choose user">Choose User</option>
 
@@ -12,6 +13,9 @@
         </select>
         <input type="submit" name="show-user" value="Show" /> or
         <input type="submit" name="delete-user" value="Delete" />
+        <?php } else { ?>
+        <p class="error-msg">There are no users to administrate!</p>
+        <?php } ?>
     </div><!-- #choose-user -->
 
     <?php
