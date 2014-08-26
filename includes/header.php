@@ -38,12 +38,12 @@ if(!isset($_SESSION['accessLevel'])) {
 						<li>
                             <a <?php checkForCurrentPage($pageTitle, 'Users') ?> href="users.php">Users</a>
                         </li>
-						<?php if($_SESSION['accessLevel'] > 1) { ?>
+						<?php if($_SESSION['accessLevel'] > 0) { ?>
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Add Post') ?> href="add-post.php">Add Post</a>
                         </li>
 						<?php } ?>
-						<?php if($_SESSION['accessLevel'] > 1) { ?>
+						<?php if($_SESSION['accessLevel'] > 0) { ?>
                         <li>
                             <a <?php checkForCurrentPage($pageTitle, 'Account') ?> href="account.php">Account</a>
                         </li>
