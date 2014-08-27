@@ -98,7 +98,7 @@ INSERT INTO `messages` (`message_id`, `category_id`, `author_id`, `date_publishe
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
-  `passwd` varchar(50) NOT NULL,
+  `passwd` varchar(255) NOT NULL,
   `activity` varchar(50) NOT NULL DEFAULT '0',
   `access_lvl` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`user_id`),
