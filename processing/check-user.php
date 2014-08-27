@@ -43,7 +43,7 @@ switch ($userAction) {
 
         if ($query->num_rows == 1) {
             $row = $query->fetch_assoc();
-
+            $password = md5($password);
             if ($username == $row['name'] && $password == $row['passwd']) {
                 keepDataForLoggedUser($row['user_id'], $row['name'], $row['access_lvl']);
                 header('Location: ../posts.php');
@@ -70,6 +70,7 @@ switch ($userAction) {
             exit();
         }
 
+        $password = md5($password);
         $sql = "INSERT INTO `users`
                 VALUES (NULL, '" . $username . "', '" . $password . "', DEFAULT, 1)";
 
