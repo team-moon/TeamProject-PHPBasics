@@ -122,7 +122,7 @@ function validatePassword($password, $reenterPassword, $messages) {
 }
 
 function validateTitle($title, $messages) {
-    if (mb_strlen($title) < 5 || mb_strlen($title) > 50) {
+    if (mb_strlen($title) < 5 || mb_strlen($title) > 100) {
         $_SESSION['messages'] = $messages['titleNotValidLength'];
         header('Location: ../add-post.php');
         exit();
@@ -140,7 +140,7 @@ function validateCategory($connection, $categoryId, $messages) {
 }
 
 function validateMessage($message, $messages) {
-    if (mb_strlen($message) < 1 || mb_strlen($message) > 250) {
+    if (mb_strlen($message) < 1) {
         $_SESSION['messages'] = $messages['messageNotValidLength'];
         header('Location: ../add-post.php');
         exit();

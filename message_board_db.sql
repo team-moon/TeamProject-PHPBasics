@@ -1,3 +1,15 @@
+--
+-- Database: `message_board_db`
+--
+CREATE DATABASE IF NOT EXISTS `message_board_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `message_board_db`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `access_levels`
+--
+
 CREATE TABLE IF NOT EXISTS `access_levels` (
   `access_lvl` tinyint(4) NOT NULL AUTO_INCREMENT,
   `access_name` varchar(50) NOT NULL,
@@ -49,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `message_id` int(255) NOT NULL,
   `user_id` varchar(250) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `comment_content` varchar(250) NOT NULL,
+  `comment_content` text NOT NULL,
   PRIMARY KEY (`comment_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
@@ -71,8 +83,8 @@ CREATE TABLE IF NOT EXISTS `messages` (
   `category_id` int(11) NOT NULL,
   `author_id` int(11) NOT NULL,
   `date_published` datetime NOT NULL,
-  `title` varchar(50) NOT NULL,
-  `body` varchar(250) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `body` text NOT NULL,
   `tags` varchar(250) NOT NULL,
   `views_count` int(11) NOT NULL,
   PRIMARY KEY (`message_id`)
