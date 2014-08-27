@@ -114,11 +114,11 @@ if(!isset($_SESSION['accessLevel'])) {
 					<ul>
 						<li><a href="https://softuni.bg/">Software University</a></li>
 						<li><a href="http://www.nakov.com/">Svetlin Nakov</a></li>
-                        <li><a href="http://chochev.eu">chochev.eu</a></li>
-                        <li><a href="http://www.alexkondov.wordpress.com/">alexkondov.wordpress.com</a></li>
-                        <li><a href="http://www.petarivanov.com/">petarivanov.com</a></li>
-                        <li><a href="http://www.vitoshacademy.com/">vitoshacademy.com</a></li>
-                        <li><a href="http://stoyanstoyanov.eu">stoyanstoyanov.eu</a></li>
+                        <li><a href="http://chochev.eu">Chochev.eu</a></li>
+                        <li><a href="http://www.alexkondov.wordpress.com/">AlexKondov.wordpress.com</a></li>
+                        <li><a href="http://www.petarivanov.com/">PetarIvanov.com</a></li>
+                        <li><a href="http://www.vitoshacademy.com/">VitoshAcademy.com</a></li>
+                        <li><a href="http://stoyanstoyanov.eu">StoyanStoyanov.eu</a></li>
 					</ul>
 				</div>
 			</aside>
