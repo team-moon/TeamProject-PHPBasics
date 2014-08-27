@@ -109,11 +109,11 @@ if(!isset($_SESSION['accessLevel'])) {
                 <?php } ?>
 			</aside>
 			<aside>
-				<header>Our Friends</header>
+				<header>Friends</header>
 				<div id="friends_links">
 					<ul>
-						<li><a href="#">Sofware University</a></li>
-						<li><a href="">TBD</a></li>
+						<li><a href="https://softuni.bg/">Software University</a></li>
+						<li><a href="http://www.nakov.com/">Svetlin Nakov</a></li>
 						<li><a href="">TBD</a></li>
 						<li><a href="">TBD</a></li>
 						<li><a href="">TBD</a></li>
