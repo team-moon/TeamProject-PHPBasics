@@ -391,6 +391,12 @@ function countAllPosts($connection) {
 
 function deleteUser($connection, $id) {
     $id = mysqli_real_escape_string($connection, $id);
+
+    // Delete all comments written by this user
+    $sql = "DELETE FROM `comments`
+            WHERE `user_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
     
     // Delete all posts written by this user
     
@@ -439,6 +445,13 @@ function getMessageById($connection, $id) {
 function deleteMessage($connection, $id) {
     $id = mysqli_real_escape_string($connection, $id);
 
+    // Delete all comments to this message
+    $sql = "DELETE FROM `comments`
+            WHERE `message_id` = '" . $id . "'";
+
+    $query = mysqli_query($connection, $sql);
+
+    // And delete the message
     $sql = "DELETE FROM `messages`
             WHERE `message_id` = '" . $id . "'";
 
