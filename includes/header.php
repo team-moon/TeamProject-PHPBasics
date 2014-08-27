@@ -109,14 +109,16 @@ if(!isset($_SESSION['accessLevel'])) {
                 <?php } ?>
 			</aside>
 			<aside>
-				<header>Friends</header>
+				<header>Links</header>
 				<div id="friends_links">
 					<ul>
 						<li><a href="https://softuni.bg/">Software University</a></li>
 						<li><a href="http://www.nakov.com/">Svetlin Nakov</a></li>
-						<li><a href="">TBD</a></li>
-						<li><a href="">TBD</a></li>
-						<li><a href="">TBD</a></li>
+                        <li><a href="http://chochev.eu">chochev.eu</a></li>
+                        <li><a href="http://www.alexkondov.wordpress.com/">alexkondov.wordpress.com</a></li>
+                        <li><a href="http://www.petarivanov.com/">petarivanov.com</a></li>
+                        <li><a href="http://www.vitoshacademy.com/">vitoshacademy.com</a></li>
+                        <li><a href="http://stoyanstoyanov.eu">stoyanstoyanov.eu</a></li>
 					</ul>
 				</div>
 			</aside>
