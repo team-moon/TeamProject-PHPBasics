@@ -110,8 +110,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`user_id`, `name`, `passwd`, `activity`, `access_lvl`) VALUES
-(1, 'Atanas', 'Atanas', '1', 3),
-(2, 'Martin', 'Martin', '0', 2),
-(3, 'Stamat', 'Stamat', '0', 1),
-(22, 'testuu', 'testuu', '0', 1),
-(23, 'test4o', 'test4o', '0', 1);
+(1, 'Atanas', 'f2907bdf21aecc47aed8af7c5566dceb', '1', 3),
+(2, 'Martin', '81d6f316d169150d0e8733866c38684d', '0', 2),
+(3, 'Stamat', '748af8e48e7ddd5e0baaf7c1a9810892', '0', 1),
+(22, 'testuu', 'd21b37dfb136abb311f15ed7be504167', '0', 1),
+(23, 'test4o', '3895f0772bd2aefaf62cd39bc36beb16', '0', 1);
